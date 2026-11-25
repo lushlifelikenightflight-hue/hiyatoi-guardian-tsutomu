@@ -1,0 +1,48 @@
+木漏れ日ドライブ / Komorebi Drive
+
+The fictional town and park were drawn using geographic references from
+https://tools.oyasumi-gamedev.com/rokehan/ (2026-11-22; two 1 km top views).
+The road network, park layout and place names were authored for the game.
+Map reference: © OpenStreetMap contributors (https://www.openstreetmap.org/copyright),
+Geospatial Information Authority of Japan (processed elevation tiles),
+© OpenMapTiles / OpenFreeMap. No exported street model is redistributed here.
+
+Station location: OpenPOI API, retrieved 2026-11-22; selected n02 record only.
+CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+「国土数値情報（鉄道データ）」（国土交通省）
+（https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html）および
+「令和2年国勢調査 小地域（町丁・字等別）境界データ」（総務省統計局、
+出典：政府統計の総合窓口(e-Stat)（https://www.e-stat.go.jp/））を加工して作成。
+The station and its relationship to the park were fictionalized; the building,
+roads, entrances and gameplay are original, not observed facility details.
+https://openpoiapi.com/attribution.html
+The reference station's position relative to the park was used as a guide
+for placing the game's station at game coordinates (2180, 1200).
+
+Vehicle concept sheets were generated locally using Qwen-Image 2.1 with
+Viggle Turbo v0.3, for non-commercial development/evaluation.
+No model weights or model implementation are included.
+Model terms: https://huggingface.co/Qwen/Qwen-Image-2.1/blob/main/LICENSE
+and https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo
+Commercial/general-release clearance has not been established by this project.
+
+Sprite slicing tool: danielwh2/sprite-stacking, MIT.
+See LICENSE-sprite-stacking.txt. The town, scooter and runtime are project-specific.
+Dust Racing 2D was a design reference; no GPL code or CC BY-SA assets included.
+
+BGM「街を抜ける風」「夜の水辺」は制作スタジオのローカル MiniMax Music 3 INT8 で生成し、本作品用に音量・ループを編集しました。
+MiniMax-Music3 COMMUNITY LICENSE: https://huggingface.co/MiniMaxAI/MiniMax-Music3/blob/main/LICENSE
+
+通常走行BGM「街角の午後」（147.69秒）・夜の「街灯の帰り道」（160秒）は本作品用のオリジナル作曲・ローカル音響合成です。tools/compose-drive.pyで再生成できます。以前の短い生成曲は復旧用素材として保持し、通常走行には使用しません。
+
+Guardian battle score (2026-11-23): original local synthesis for 日雇いガーディアンつとむ. No external samples. Generator: tools/generate-guardian-battle.py; 144 BPM / 80 bars / 133.333 s. guardian-battle.ogg is a separately composed battle-only loop.
+
+Pixel VFX: pixelfx (https://github.com/patch-gg/pixelfx), Copyright (c) 2026 Patch and Hugo Duprez, MIT. Meteor / flame / lightning recipes derive from Sprite Fusion MIT effects by Hugo Duprez. Full license: vfx/LICENSE.txt. Exported at 15fps; timings adapted to game damage.
+
+Destroy King (2026-11-24): original AI-generated orthographic concepts, processed with the MIT sprite-stacking slicer into 80 horizontal slices and six articulated parts. Armor face cleanup, animation, rifle/sword equipment and combat VFX are project-specific. Production sources and regeneration notes: assets/robot and tools/build-robot-parts.py. No third-party robot model or character artwork imported.
+
+怪獣迎撃マーチ / 2026-11-24: 制作スタジオのMiniMax Music 3 INT8によるローカル生成のインストゥルメンタル。歌詞なし、歌声なしを指定。既存作品の音源/旋律/サンプルは入力せず、特撮ヒーロー戦闘の一般的な楽器編成を指示。再生用の末尾/先頭クロスフェードと音量調整。生成条件/原FLAC参照/ハッシュはプロジェクトwork/audio/tokusatsu-battle。従来のguardian-battle.oggは旧動画と復旧用に保持。
+
+怪獣迎撃マーチ・ロング版 / 2026-11-24: MiniMax Music3による歌なしの異なる3生成音源を各1回使用し、主題/展開/終盤として編集。127.489秒。継ぎ目3.75秒クロスフェード、RMSを整え一定ゲインでマスタリング。長さ上限160秒の2試行が29.559秒/79.192秒で終了したため、単独出力を長尺完成とは扱わず楽章を編集した。条件/入力SHA/原FLAC参照はwork/audio/tokusatsu-long-v2/manifest.json。既存曲の音源/旋律は使用せず、歌詞/歌声なし設定。
+
+2026-11-24訂正: 以前の「歌声なし」は生成指示であり、実音声に歌声が混入していた。4.1.3は既存htdemucs_6sでvocalsを除去したguardian-battle-instrumental.oggへ更新。利用者が冒頭20秒で歌声が消えたと確認。全曲の人による聴感確認とは区別。旧音源は復旧/比較用。分離器の出典/ライセンスは音源分離スタジオvendor/及びwork/provenance.jsonを参照。

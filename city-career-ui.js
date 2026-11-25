@@ -1,0 +1,13 @@
+import {cityChoices,chooseCity,choiceDetail} from './city-evolution.js?v=5.3.0';
+import {medals} from './career-progress.js?v=5.3.0';
+export function mountCityCareer({state,onChoose,onClose}){
+ const root=document.createElement('div');root.id='city-career';root.className='overlay';root.hidden=true;
+ const panel=document.createElement('section');panel.className='menu-dialog city-career-dialog';panel.setAttribute('role','dialog');panel.setAttribute('aria-modal','true');panel.setAttribute('aria-labelledby','city-career-title');root.append(panel);document.getElementById('game').append(root);
+ let mode=null;
+ const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
+ function head(title,close){const h=el('div',undefined,'dialog-head'),t=el('h2',title);t.id='city-career-title';h.append(t);if(close){const b=el('button','閉じる');b.type='button';b.onclick=()=>{root.hidden=true;mode=null;onClose();};h.append(b);}panel.append(h);}
+ function weekly(){mode='weekly';panel.replaceChildren();head(state.hero.day+'日目、街のこれから',false);panel.append(el('p','税収 ＋'+(state.hero.lastTax?.amount??0).toLocaleString('ja-JP')+' pt。つとむ「相棒、次はどんな街にしようか？」'));
+ const grid=el('div',undefined,'city-choice-grid');for(const id of state.hero.city.offers){const c=cityChoices.find(c=>c.id===id),b=el('button',undefined,'city-choice');b.type='button';b.append(el('strong',c.name),el('span',c.title),el('small',choiceDetail(state,id)));b.onclick=()=>{if(mode!=='weekly'||!chooseCity(state,id))return;grid.querySelectorAll('button').forEach(n=>n.disabled=true);root.hidden=true;mode=null;onChoose(c);};grid.append(b);}panel.append(grid);root.hidden=false;grid.querySelector('button')?.focus();}
+ function trophies(){mode='medals';panel.replaceChildren();head('勲章 '+state.hero.career.medals.length+' / '+medals.length,true);const list=el('div',undefined,'medal-list');for(const m of medals){const won=state.hero.career.medals.includes(m.id),value=Math.max(0,Math.min(m.target,Math.floor(m.value(state)||0))),row=el('article',undefined,'medal-row'+(won?' earned':''));const icon=el('span',won?'◆':'◇','medal-mark');icon.setAttribute('aria-hidden','true');const body=el('div');body.append(el('strong',m.name),el('small',m.description));const p=el('progress');p.max=m.target;p.value=won?m.target:value;p.setAttribute('aria-label',m.name);body.append(p);row.append(icon,body,el('span',won?'獲得済み':value.toLocaleString('ja-JP')+' / '+m.target.toLocaleString('ja-JP')));list.append(row);}panel.append(list);root.hidden=false;panel.querySelector('button').focus();}
+ return {weekly,trophies,get mode(){return mode;},get panel(){return root.hidden?null:panel;}};
+}

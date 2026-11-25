@@ -1,0 +1,1 @@
+export const robotWeapons={rifle:{id:'robot-rifle',name:'デストロイライフル',damage:1400,range:700,cooldown:.14,color:'#a9f8ff'},sword:{id:'beam-sword',name:'デストロイビームソード',damage:3200,range:120,cooldown:.78,color:'#ffb5f0'}};

@@ -1,0 +1,5 @@
+/* Hallmark: existing forest-green/gold game HUD; component scope, direct job bearing. Preserve native game typography and controls. */
+.work-compass{position:absolute;z-index:5;top:76px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:var(--space-3);width:min(320px,calc(100% - 420px));padding:var(--space-3) var(--space-4);background:var(--panel);border:1px solid var(--accent);border-radius:4px;color:var(--ink);pointer-events:none}
+.work-compass[hidden]{display:none}.work-compass svg{width:44px;height:44px;flex:0 0 44px;fill:var(--accent)}.work-compass strong,.work-compass span{display:block}.work-compass strong{font-size:14px;line-height:1.4;overflow-wrap:anywhere;text-wrap:balance}.work-compass span{font-size:13px;margin-top:var(--space-1);font-variant-numeric:tabular-nums}.work-guidance .destination{display:none}.hero-under-attack .work-compass{top:170px}
+@media(max-width:900px){.work-compass{top:240px;width:min(320px,calc(100% - 32px))}.hero-under-attack .work-compass{top:310px}.work-compass strong{font-size:13px}}
+@media(max-height:550px) and (min-width:901px){.work-compass{top:64px}.hero-under-attack .work-compass{top:150px}}

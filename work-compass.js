@@ -1,0 +1,9 @@
+import {jobTarget} from './jobs.js?v=5.3.0';
+export function workCompassGoal(s){const target=s.work&&jobTarget(s);if(!target||!Number.isFinite(target.x)||!Number.isFinite(target.y))return null;return {...target,x:Number.isFinite(target.siteX)?target.siteX:target.x,y:Number.isFinite(target.siteY)?target.siteY:target.y};}
+export function compassBearing(player,goal){return Math.atan2(goal.y-player.y,goal.x-player.x)+Math.PI/2;}
+export function mountWorkCompass(root){const panel=document.createElement('div');panel.id='work-compass';panel.className='work-compass hud';panel.hidden=true;panel.setAttribute('role','img');
+ const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.id='work-compass-arrow';svg.setAttribute('viewBox','0 0 48 48');svg.setAttribute('aria-hidden','true');const path=document.createElementNS('http://www.w3.org/2000/svg','path');path.setAttribute('d','M24 3 44 42 24 33 4 42Z');svg.append(path);
+ const body=document.createElement('div'),title=document.createElement('strong'),distance=document.createElement('span');title.id='work-compass-name';distance.id='work-compass-distance';body.append(title,distance);panel.append(svg,body);root.append(panel);
+ return {update(s,renderer,visible){const goal=workCompassGoal(s),active=Boolean(visible&&goal&&!s.broken&&!s.trial&&!s.pursuit);panel.hidden=!active;root.classList.toggle('work-guidance',active&&!s.serviceGuide&&!(s.hero.monster&&s.hero.guideMonster));if(!active)return;
+ const at=renderer.screen(s.x,s.y,s.deck??0),end=renderer.screen(goal.x,goal.y,0),angle=compassBearing(at,end),metres=Math.round(Math.hypot(goal.x-s.x,goal.y-s.y)*.12);svg.style.transform='rotate('+angle+'rad)';title.textContent=goal.name;distance.textContent=metres+' m　'+(s.work.index+1)+' / '+s.work.stops.length;panel.setAttribute('aria-label','仕事の目的地 '+goal.name+'、直線距離 '+metres+'メートル');panel.dataset.angle=String(angle);panel.dataset.target=goal.id;}};
+}

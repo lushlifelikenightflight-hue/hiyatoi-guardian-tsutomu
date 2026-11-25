@@ -1,0 +1,10 @@
+:root{--release-bg:#172e29;--release-text:#f2e7c8;--release-border:#91aa91;--release-muted:#c0cbb6}
+.release-overlay{z-index:90;background:color-mix(in srgb,var(--release-bg) 94%,transparent);color:var(--release-text)}
+.release-overlay .menu-dialog{max-width:520px;display:grid;gap:16px;text-align:left}
+.release-overlay p{margin:0;line-height:1.75;overflow-wrap:anywhere}
+.release-overlay small{color:var(--release-muted);line-height:1.7}
+.release-overlay button:focus-visible,.transfer-file:focus-within{outline:3px solid var(--release-border);outline-offset:3px}
+.transfer-file{display:grid;gap:10px;padding:14px;border:1px solid var(--release-border);border-radius:10px}
+.transfer-file input{width:100%;min-width:0;color:var(--release-text)}
+.release-note{font-size:12px!important;line-height:1.7;color:var(--release-muted);max-width:34em}
+.release-links{display:flex;gap:12px;flex-wrap:wrap;align-items:center}

@@ -1,0 +1,1 @@
+export function makeCanvas(w=1,h=1){const canvas=typeof document==='undefined'?new OffscreenCanvas(Math.ceil(w),Math.ceil(h)):document.createElement('canvas');canvas.width=Math.ceil(w);canvas.height=Math.ceil(h);return canvas;}

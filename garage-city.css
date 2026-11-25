@@ -1,0 +1,9 @@
+/* Hallmark · v2.0.0 · existing game instruments and garage shop */
+/* Critique: Keep direct driving actions visible; purchase decisions belong inside garages. */
+#population-live{position:absolute;left:16px;top:62px;font-size:12px;color:var(--ink);background:var(--panel);padding:var(--space-1) var(--space-2);border-radius:4px;font-variant-numeric:tabular-nums;pointer-events:none}
+.condition-panel{top:92px}#game #garage-quick:not([hidden]){display:block!important}.hero-hud,.hero-under-attack .hero-hud{max-width:calc(100% - 100px);flex-wrap:wrap}.shop-tabs{display:flex;gap:var(--space-2);margin:var(--space-4) var(--space-0)}.shop-tabs button{flex:1;min-width:0;padding:var(--space-2)}.shop-tabs [aria-pressed=true]{background:var(--accent);color:var(--accent-dark)}#vehicle-picker{z-index:7}#vehicle-picker .menu-dialog{width:min(700px,100%)}#garage-route{display:none}#garage-upgrades[hidden],#hero-shop[hidden]{display:none}.garage-dialog{width:min(760px,100%)}.garage-dialog .hero-shop{margin-top:var(--space-3)}.garage-dialog #garage-feedback{min-height:24px}
+@media(max-width:700px){#population-live{left:12px;top:66px;font-size:11px}.condition-panel{top:94px}.hero-under-attack #population-live{top:145px}.hero-under-attack .condition-panel{top:174px}.hero-hud button{font-size:11px;padding:var(--space-2)}.hero-hud,.hero-under-attack .hero-hud{max-width:calc(100% - 90px)}.shop-tabs{gap:var(--space-1)}.shop-tabs button{font-size:12px}.garage-dialog .dialog-head h2{font-size:18px}}
+
+#game #garage-quick:not([hidden]){width:auto;flex:0 0 auto;margin:var(--space-0);padding:var(--space-2) var(--space-3)}
+
+.garage-destination{border-color:var(--accent);color:var(--accent)}

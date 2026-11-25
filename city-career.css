@@ -1,0 +1,13 @@
+/* Hallmark: component scope; existing forest-green/gold game system; three city decisions and goal ledger. Waive theme draw/scaffold: preserve existing game UI. Parent review only. */
+:root{--career-surface:#172e29;--career-ink:#f3f2dd;--career-edge:#718378;--career-choice:#264239;--career-choice-edge:#87958a;--career-gold:#f3ce7a;--career-hover:#345547;--career-focus:#ffe19b;--career-active:#42634b;--career-rule:#52655b;--career-muted:#d6dfd3;--career-locked:#91a293;--career-progress:#e8c579;}
+.city-career-dialog{width:min(950px,94vw);max-height:90dvh;overflow:auto;background:var(--career-surface);color:var(--career-ink);border:1px solid var(--career-edge);padding:clamp(20px,3vw,32px)}
+.city-career-dialog h2{font-size:clamp(24px,3vw,30px);margin:0;text-wrap:balance}.city-career-dialog p{line-height:1.8;margin:20px 0 24px}
+.city-choice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.city-choice{display:flex;flex-direction:column;text-align:left;gap:16px;min-height:210px;padding:24px;background:var(--career-choice);border:1px solid var(--career-choice-edge);color:var(--career-ink);border-radius:10px;font:inherit;cursor:pointer}
+.city-choice strong{font-size:24px;color:var(--career-gold)}.city-choice span{font-size:17px}.city-choice small{font-size:16px;line-height:1.7;margin-top:auto}
+.city-choice:hover{background:var(--career-hover)}.city-career-dialog button:focus-visible{outline:3px solid var(--career-focus);outline-offset:3px}.city-career-dialog button:active{background:var(--career-active)}.city-career-dialog button:disabled{opacity:.55;cursor:not-allowed;filter:grayscale(1)}
+.medal-list{display:grid;gap:0;margin-top:20px}.medal-row{display:grid;grid-template-columns:32px 1fr auto;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--career-rule)}.medal-row strong,.medal-row small{display:block}.medal-row strong{font-size:20px}.medal-row small{font-size:15px;margin:4px 0;color:var(--career-muted)}.medal-row>span:last-child{font-size:16px}.medal-mark{font-size:30px;color:var(--career-locked)}.earned .medal-mark,.earned>span:last-child{color:var(--career-gold)}.medal-row progress{width:min(100%,310px);height:8px;accent-color:var(--career-progress)}
+#city-summary{font-size:16px;line-height:1.8;color:var(--career-muted);white-space:pre-line}
+@media(max-width:620px){.city-choice-grid{grid-template-columns:1fr}.city-choice{min-height:0;gap:8px;padding:16px}.city-choice strong{font-size:20px}.city-choice small{font-size:15px}.medal-row{grid-template-columns:24px 1fr;gap:12px}.medal-row>span:last-child{grid-column:2}.city-career-dialog{max-height:88dvh}}
+
+.city-choice small{white-space:pre-line}
