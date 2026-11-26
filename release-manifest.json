@@ -1,5 +1,5 @@
 {
-  "version": "5.4.0",
+  "version": "5.4.1",
   "profile": "production-static",
   "developerTools": false,
   "files": [
@@ -11,7 +11,7 @@
     {
       "file": "README.md",
       "bytes": 1036,
-      "sha256": "604a2cf3484367b040966fcc25774f78bc937ccb43cc08a639561827180db1e4"
+      "sha256": "96f06617c28ad4de299749f8a89659754b36d885418ccd10205ed5144b7b5849"
     },
     {
       "file": "ambulance.js",
@@ -296,7 +296,7 @@
     {
       "file": "index.html",
       "bytes": 18028,
-      "sha256": "1ee6da788111e755067ecae4ddfa1d6a4f659c069bb05bacbe9d6d79ec23c164"
+      "sha256": "9613d5ce2976c33a6256007a477127c9c4745da3d09a12f2b312ffeb9803d5dd"
     },
     {
       "file": "job-contracts.js",
@@ -540,8 +540,8 @@
     },
     {
       "file": "title.css",
-      "bytes": 2751,
-      "sha256": "a6ffd948f93e5b4ba7da5e9cf8fd63914cc4c0dfef81a27b7189f3684b0e9d5c"
+      "bytes": 3452,
+      "sha256": "c106fc280d5197aeee6296d319b5982dd7b372e501e651a9f34134a4b0900d55"
     },
     {
       "file": "traffic.js",
@@ -624,5 +624,5 @@
       "sha256": "62c628ecc87c4ec1e807b9b9a3594aaed03c17967c6fd6ae26c75e3ca0e40cc0"
     }
   ],
-  "bytes": 16552960
+  "bytes": 16553661
 }

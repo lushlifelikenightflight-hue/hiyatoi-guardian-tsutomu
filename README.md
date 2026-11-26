@@ -1,6 +1,6 @@
 # 日雇いガーディアンつとむ
 
-無料ブラウザーゲーム / 5.4.0
+無料ブラウザーゲーム / 5.4.1
 
 https://lushlifelikenightflight-hue.github.io/hiyatoi-guardian-tsutomu/
 
