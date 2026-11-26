@@ -1,4 +1,4 @@
-import {SIZE,WEST_EDGE} from './world.js?v=5.3.0';
+import {SIZE,WEST_EDGE} from './world.js?v=5.4.0';
 
 const HUD_VIEW_WIDTH=3000;
 

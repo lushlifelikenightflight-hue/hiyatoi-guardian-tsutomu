@@ -1,7 +1,7 @@
-import {modificationCost} from './economy.js?v=5.3.0';
-import {machineGarages,stoppedGarage} from './garage-sites.js?v=5.3.0';
-import {vehicles} from './vehicle-specs.js?v=5.3.0';
-import {GARAGE,serviceBays,SERVICE_RADIUS,civicSites} from './world.js?v=5.3.0';
+import {modificationCost} from './economy.js?v=5.4.0';
+import {machineGarages,stoppedGarage} from './garage-sites.js?v=5.4.0';
+import {vehicles} from './vehicle-specs.js?v=5.4.0';
+import {GARAGE,serviceBays,SERVICE_RADIUS,civicSites} from './world.js?v=5.4.0';
 
 export const upgradeLimit=5;
 export const upgradeTypes=[

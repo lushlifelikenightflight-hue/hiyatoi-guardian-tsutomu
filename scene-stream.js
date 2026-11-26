@@ -1,8 +1,8 @@
-import {project} from './art.js?v=5.3.0';
+import {project} from './art.js?v=5.4.0';
 export class SceneStream{
  constructor(renderer){this.r=renderer;this.pending=new Set();this.objects=new Map(renderer.static.map(o=>[o.data.id,o]));this.waiters=[];this.active=false;this.errors=[];this.preview=new Map();this.status('fallback');
   if(typeof Worker==='undefined'||typeof OffscreenCanvas==='undefined')return;
-  try{this.worker=new Worker(new URL('./scene-worker.js?v=5.3.0',import.meta.url),{type:'module'});this.active=true;this.status('preparing');this.worker.onmessage=({data})=>this.receive(data);this.worker.onerror=e=>{this.errors.push(e.message);this.active=false;this.status('fallback');this.worker.terminate();this.waiters.splice(0).forEach(f=>f());};}catch(e){this.errors.push(String(e));}
+  try{this.worker=new Worker(new URL('./scene-worker.js?v=5.4.0',import.meta.url),{type:'module'});this.active=true;this.status('preparing');this.worker.onmessage=({data})=>this.receive(data);this.worker.onerror=e=>{this.errors.push(e.message);this.active=false;this.status('fallback');this.worker.terminate();this.waiters.splice(0).forEach(f=>f());};}catch(e){this.errors.push(String(e));}
  }
  status(mode){if(this.r.canvas?.dataset)this.r.canvas.dataset.terrain=mode;}
  receive(data){this.pending.delete(data.key);if(data.error){this.errors.push(data.error);this.active=false;this.status('fallback');this.worker.terminate();this.waiters.splice(0).forEach(f=>f());return;}

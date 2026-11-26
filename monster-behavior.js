@@ -1,4 +1,4 @@
-import {world,isDestroyed,WEST_EDGE,SIZE} from './world.js?v=5.3.0';
+import {world,isDestroyed,WEST_EDGE,SIZE} from './world.js?v=5.4.0';
 
 // A full game day: independent of simulation age, pause, and save/reload.
 export const monsterDaySeconds=480;

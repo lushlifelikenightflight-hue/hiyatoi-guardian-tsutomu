@@ -1,17 +1,17 @@
-import {repairCost} from './balance-tuning.js?v=5.3.0';
-import {recordAbsence,returnCitizens,validEvacuations} from './citizen-recovery.js?v=5.3.0';
-import {validMonsterAttack} from './monster-attacks.js?v=5.3.0';
-import {newCity,validCity,offerCityWeek,cityObjectActive,cityArmor} from './city-evolution.js?v=5.3.0';
-import {newCareer,validCareer,newTutorial,validTutorial} from './career-progress.js?v=5.3.0';
-import {monsterDaySeconds,heroClock,monsterPower,restoreMonster,checkMonsterDeadline} from './monster-behavior.js?v=5.3.0';
-import {queueVehicleTalk} from './vehicle-talk.js?v=5.3.0';
-import {newRobotProgress,validRobotProgress,updateRobotProgress,buyRobotPart,recordDemolition} from './robot-progress.js?v=5.3.0';
-import {machinePrices,machinePrice,weaponUpgradeCost} from './economy.js?v=5.3.0';
-export {machinePrices} from './economy.js?v=5.3.0';
-import {newWeather,validWeather,updateWeather} from './weather.js?v=5.3.0';
-import {world,roads,WEST_EDGE,SIZE,isDestroyed,objectHits} from './world.js?v=5.3.0';
-import {vehicles} from './vehicle-specs.js?v=5.3.0';
-import {vehicleStats,garageAt} from './upgrades.js?v=5.3.0';
+import {repairCost} from './balance-tuning.js?v=5.4.0';
+import {recordAbsence,returnCitizens,validEvacuations} from './citizen-recovery.js?v=5.4.0';
+import {validMonsterAttack} from './monster-attacks.js?v=5.4.0';
+import {newCity,validCity,offerCityWeek,cityObjectActive,cityArmor} from './city-evolution.js?v=5.4.0';
+import {newCareer,validCareer,newTutorial,validTutorial} from './career-progress.js?v=5.4.0';
+import {monsterDaySeconds,heroClock,monsterPower,restoreMonster,checkMonsterDeadline} from './monster-behavior.js?v=5.4.0';
+import {queueVehicleTalk} from './vehicle-talk.js?v=5.4.0';
+import {newRobotProgress,validRobotProgress,updateRobotProgress,buyRobotPart,recordDemolition} from './robot-progress.js?v=5.4.0';
+import {machinePrices,machinePrice,weaponUpgradeCost} from './economy.js?v=5.4.0';
+export {machinePrices} from './economy.js?v=5.4.0';
+import {newWeather,validWeather,updateWeather} from './weather.js?v=5.4.0';
+import {world,roads,WEST_EDGE,SIZE,isDestroyed,objectHits} from './world.js?v=5.4.0';
+import {vehicles} from './vehicle-specs.js?v=5.4.0';
+import {vehicleStats,garageAt} from './upgrades.js?v=5.4.0';
 
 export const daySeconds=monsterDaySeconds,raidInterval=3;
 export const weaponSpecs=[

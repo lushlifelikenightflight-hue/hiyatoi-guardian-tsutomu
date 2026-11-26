@@ -1,5 +1,5 @@
-import {makeCanvas} from './canvas-factory.js?v=5.3.0';
-import {world,isDestroyed} from './world.js?v=5.3.0';
+import {makeCanvas} from './canvas-factory.js?v=5.4.0';
+import {world,isDestroyed} from './world.js?v=5.4.0';
 const stops=[[0,.8],[3,.8],[4,.76],[5,.52],[6,.1],[7,0],[17,0],[18,.25],[19,.46],[20,.65],[21,.74],[22,.79],[24,.8]];
 export function nightDarkness(hour){hour=(hour%24+24)%24;for(let i=1;i<stops.length;i++)if(hour<=stops[i][0]){const [a,x]=stops[i-1],[b,y]=stops[i];return x+(y-x)*(hour-a)/(b-a);}return 0;}
 export const gameHour=s=>(6+(s.hero?.clock??0)/480*24)%24;

@@ -1,6 +1,6 @@
-import {destinations,responseRoadPath,SERVICE_RADIUS} from './world.js?v=5.3.0';
-import {jobTarget} from './jobs.js?v=5.3.0';
-import {railExitPath} from './rail-drive.js?v=5.3.0';
+import {destinations,responseRoadPath,SERVICE_RADIUS} from './world.js?v=5.4.0';
+import {jobTarget} from './jobs.js?v=5.4.0';
+import {railExitPath} from './rail-drive.js?v=5.4.0';
 
 export function guidanceTarget(s,target){
  if(s.trial||s.pursuit||s.broken)return null;

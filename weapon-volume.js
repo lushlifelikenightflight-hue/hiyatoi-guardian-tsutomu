@@ -1,6 +1,6 @@
-import {world,isDestroyed} from './world.js?v=5.3.0';
-import {groundHeight} from './elevation.js?v=5.3.0';
-import {bodyOpacity} from './wreckage.js?v=5.3.0';
+import {world,isDestroyed} from './world.js?v=5.4.0';
+import {groundHeight} from './elevation.js?v=5.4.0';
+import {bodyOpacity} from './wreckage.js?v=5.4.0';
 const clip=(lo,hi,a,b,min,max)=>{if(Math.abs(b)<1e-9)return a<min||a>max?null:[lo,hi];const t0=(min-a)/b,t1=(max-a)/b;lo=Math.max(lo,Math.min(t0,t1));hi=Math.min(hi,Math.max(t0,t1));return lo<=hi?[lo,hi]:null;};
 export function segmentBoxHit(a,b,o,radius=0){const angle=o.angle??0,c=Math.cos(angle),n=Math.sin(angle),dx=a.x-o.x,dy=a.y-o.y,vx=b.x-a.x,vy=b.y-a.y;let interval=[0,1];for(const [origin,direction,min,max] of [[dx*c+dy*n,vx*c+vy*n,-o.w/2-radius,o.w/2+radius],[-dx*n+dy*c,-vx*n+vy*c,-o.d/2-radius,o.d/2+radius],[a.z,b.z-a.z,o.z-radius,o.z+o.h+radius]]){interval=clip(...interval,origin,direction,min,max);if(!interval)return null;}return interval[0];}
 export function segmentCylinderHit(a,b,o,radius=0){const x=a.x-o.x,y=a.y-o.y,dx=b.x-a.x,dy=b.y-a.y,A=dx*dx+dy*dy,B=2*(x*dx+y*dy),C=x*x+y*y-(o.r+radius)**2;let lo=0,hi=1;if(A<1e-9){if(C>0)return null;}else{const D=B*B-4*A*C;if(D<0)return null;lo=Math.max(lo,(-B-Math.sqrt(D))/(2*A));hi=Math.min(hi,(-B+Math.sqrt(D))/(2*A));if(lo>hi)return null;}const interval=clip(lo,hi,a.z,b.z-a.z,o.z-radius,o.z+o.h+radius);return interval?interval[0]:null;}

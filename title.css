@@ -1,0 +1,17 @@
+:root{--front-ink:#f8eac5;--front-gold:#e7c487;--front-night:#132b28;--front-line:#b99f6c;--front-shade:rgba(7,24,23,.87);--front-clear:rgba(7,24,23,.16);--front-shadow:rgba(0,0,0,.45)}
+.front-screen{position:absolute;inset:0;color:var(--front-ink);background:linear-gradient(90deg,var(--front-shade),var(--front-clear)),url('assets/opening-poster.jpg') center/cover;display:flex;align-items:center;padding:clamp(24px,7vw,100px);z-index:9}
+#opening{position:absolute;inset:0;z-index:10;background:var(--front-night);color:var(--front-ink)}
+#opening-video{display:block;width:100%;height:100%;object-fit:contain;background:var(--front-night)}
+#opening-skip{position:absolute;right:24px;bottom:max(24px,env(safe-area-inset-bottom));color:var(--front-ink);background:var(--front-shade);border-color:var(--front-line)}
+.front-brand{max-width:760px;min-width:0}.front-brand h1{font-family:var(--font-display);font-weight:600;font-size:clamp(4.8rem,13vw,10rem);line-height:1.1;text-shadow:0 4px 28px var(--front-shadow);overflow-wrap:break-word;margin:0 0 32px}
+.front-brand h1 span{display:block;font-size:clamp(1.2rem,3.1vw,2.5rem);line-height:1.6;letter-spacing:.04em;color:var(--front-gold)}
+#title-activate{background:var(--front-shade);border-color:var(--front-gold);color:var(--front-ink);padding:16px 28px;font-size:1rem}
+#intro.title-menu{z-index:6;background:linear-gradient(90deg,var(--front-shade),var(--front-clear)),url('assets/opening-poster.jpg') center/cover;color:var(--front-ink)}
+#intro.title-menu .intro-copy{max-width:560px;min-width:0}#intro.title-menu h1{font-size:clamp(2.8rem,6vw,4.5rem);margin-bottom:24px}
+.title-options{display:grid;gap:12px;max-width:330px;margin-top:24px}.title-options button{min-height:52px;text-align:left;padding-inline:22px;font-size:1.05rem}
+#front-status{font-size:.85rem;line-height:1.7;color:var(--front-gold);margin-top:12px;max-width:32em}#front-status:empty{display:none}
+#title-menu-back{background:var(--front-shade);color:var(--front-ink)}
+#new-game-confirm{z-index:100}.front-confirm{max-width:460px;display:grid;gap:20px}.front-confirm p{line-height:1.8}.front-confirm .front-confirm-actions{display:flex;gap:12px;flex-wrap:wrap}
+#instructions-panel{z-index:80}
+@media(max-width:600px){.front-screen{padding:28px}.front-brand h1{font-size:clamp(4.5rem,23vw,7rem)}.front-brand h1 span{font-size:1.2rem}#intro.title-menu .intro-copy{padding:28px;width:100%}.title-options{max-width:none}#intro.title-menu h1{font-size:2.7rem}#intro.title-menu .intro-bottom{gap:8px;flex-wrap:wrap;justify-content:flex-start;bottom:20px}#opening-skip{right:16px;bottom:20px}.release-note{max-width:28em}}
+@media(prefers-reduced-motion:reduce){.front-screen *{animation:none!important;transition:none!important}}

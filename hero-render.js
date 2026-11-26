@@ -1,10 +1,10 @@
-import {drawRobotAttacks} from './robot-vfx.js?v=5.3.0';
-import {drawPixelVfx} from './pixel-vfx.js?v=5.3.0';
-import {monsterStack} from './hero-art.js?v=5.3.0';
-import {bakeStack,drawSprite,YAW} from './art.js?v=5.3.0';
-import {world,civicSites,isDestroyed} from './world.js?v=5.3.0';
-import {activeWeapon,weaponAim} from './hero-combat.js?v=5.3.0';
-import {railProjection} from './rail-drive.js?v=5.3.0';
+import {drawRobotAttacks} from './robot-vfx.js?v=5.4.0';
+import {drawPixelVfx} from './pixel-vfx.js?v=5.4.0';
+import {monsterStack} from './hero-art.js?v=5.4.0';
+import {bakeStack,drawSprite,YAW} from './art.js?v=5.4.0';
+import {world,civicSites,isDestroyed} from './world.js?v=5.4.0';
+import {activeWeapon,weaponAim} from './hero-combat.js?v=5.4.0';
+import {railProjection} from './rail-drive.js?v=5.4.0';
 
 export function drawMonster(renderer,s,upper=false){
  const m=s.hero.monster;if(!m)return;

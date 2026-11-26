@@ -1,7 +1,7 @@
-import {clamp} from './geometry.js?v=5.3.0';
-import {blocked,crossings,roads,responseRoadPath,world} from './world.js?v=5.3.0';
-import {crossingActive} from './railway.js?v=5.3.0';
-import {collideWithPatrol} from './physics.js?v=5.3.0';
+import {clamp} from './geometry.js?v=5.4.0';
+import {blocked,crossings,roads,responseRoadPath,world} from './world.js?v=5.4.0';
+import {crossingActive} from './railway.js?v=5.4.0';
+import {collideWithPatrol} from './physics.js?v=5.4.0';
 
 export const escapeStart={id:'escape-start',name:'西の追跡スタート',x:-2145,y:2059.2};
 export const chaseLimit=240;

@@ -1,6 +1,6 @@
-import {blocked,crossings,responseRoadPath,serviceBays} from './world.js?v=5.3.0';
-import {crossingActive} from './railway.js?v=5.3.0';
-import {bodyOpacity} from './wreckage.js?v=5.3.0';
+import {blocked,crossings,responseRoadPath,serviceBays} from './world.js?v=5.4.0';
+import {crossingActive} from './railway.js?v=5.4.0';
+import {bodyOpacity} from './wreckage.js?v=5.4.0';
 
 function route(points){
  let length=0;

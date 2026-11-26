@@ -1,5 +1,5 @@
-import {cityChoices,chooseCity,choiceDetail} from './city-evolution.js?v=5.3.0';
-import {medals} from './career-progress.js?v=5.3.0';
+import {cityChoices,chooseCity,choiceDetail} from './city-evolution.js?v=5.4.0';
+import {medals} from './career-progress.js?v=5.4.0';
 export function mountCityCareer({state,onChoose,onClose}){
  const root=document.createElement('div');root.id='city-career';root.className='overlay';root.hidden=true;
  const panel=document.createElement('section');panel.className='menu-dialog city-career-dialog';panel.setAttribute('role','dialog');panel.setAttribute('aria-modal','true');panel.setAttribute('aria-labelledby','city-career-title');root.append(panel);document.getElementById('game').append(root);
