@@ -1,3 +1,6 @@
+/* Hallmark · v2.0.0 · shape: app screen · theme: 木陰と真鍮 · genre: playful · signature: stacked-pixel town opening dissolves into the title */
+/* Critique: Keep the existing town and title hierarchy; the two opening buttons only control sound and skip. */
+/* Hallmark · waive 38iii · front-brand h1 span is the complete 日雇いガーディアン title line above つとむ · Preserve the existing two-line game title rather than highlighting a promotional word. */
 :root{--front-ink:#f8eac5;--front-gold:#e7c487;--front-night:#132b28;--front-line:#b99f6c;--front-shade:rgba(7,24,23,.87);--front-clear:rgba(7,24,23,.16);--front-shadow:rgba(0,0,0,.45)}
 .front-screen{position:absolute;inset:0;color:var(--front-ink);background:linear-gradient(90deg,var(--front-shade),var(--front-clear)),url('assets/opening-poster.jpg') center/cover;display:flex;align-items:center;padding:clamp(24px,7vw,100px);z-index:9}
 #opening{position:absolute;inset:0;z-index:10;background:var(--front-night);color:var(--front-ink)}
@@ -8,7 +11,7 @@
 #title-activate{background:var(--front-shade);border-color:var(--front-gold);color:var(--front-ink);padding:16px 28px;font-size:1rem}
 #intro.title-menu{z-index:6;background:linear-gradient(90deg,var(--front-shade),var(--front-clear)),url('assets/opening-poster.jpg') center/cover;color:var(--front-ink)}
 #intro.title-menu .intro-copy{max-width:560px;min-width:0}#intro.title-menu h1{font-size:clamp(2.8rem,6vw,4.5rem);margin-bottom:24px}
-.title-options{display:grid;gap:12px;max-width:330px;margin-top:24px}.title-options button{min-height:52px;text-align:left;padding-inline:22px;font-size:1.05rem}
+.title-options{display:grid;gap:12px;max-width:330px;margin-top:24px}.title-options button{min-height:52px;text-align:left;padding-inline:24px;font-size:1.05rem}
 #front-status{font-size:.85rem;line-height:1.7;color:var(--front-gold);margin-top:12px;max-width:32em}#front-status:empty{display:none}
 #title-menu-back{background:var(--front-shade);color:var(--front-ink)}
 #new-game-confirm{z-index:100}.front-confirm{max-width:460px;display:grid;gap:20px}.front-confirm p{line-height:1.8}.front-confirm .front-confirm-actions{display:flex;gap:12px;flex-wrap:wrap}
@@ -16,4 +19,9 @@
 @media(max-width:600px){.front-screen{padding:28px}.front-brand h1{font-size:clamp(4.5rem,23vw,7rem)}.front-brand h1 span{font-size:1.2rem}#intro.title-menu .intro-copy{padding:28px;width:100%}.title-options{max-width:none}#intro.title-menu h1{font-size:2.7rem}#intro.title-menu .intro-bottom{gap:8px;flex-wrap:wrap;justify-content:flex-start;bottom:20px}#opening-skip{right:16px;bottom:20px}.release-note{max-width:28em}}
 @media(prefers-reduced-motion:reduce){.front-screen *{animation:none!important;transition:none!important}}
 
-@media(max-height:550px){#intro.title-menu{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;overflow:auto}#intro.title-menu .intro-copy{margin:0;padding:20px 32px;max-width:850px;width:100%;flex-shrink:0}#intro.title-menu h1{font-size:2.2rem;line-height:1.15;margin:0 0 10px}#intro.title-menu .intro-copy>p:first-of-type{margin-top:10px}#intro.title-menu .title-options{grid-template-columns:repeat(3,minmax(0,1fr));max-width:none;margin-top:12px}#intro.title-menu .title-options button{padding:10px;min-height:48px;text-align:center}#intro.title-menu .intro-bottom{position:static;display:flex;flex-shrink:0;padding:0 32px 20px;justify-content:flex-start;gap:20px}}
+@media(max-height:550px){#intro.title-menu{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;overflow:auto}#intro.title-menu .intro-copy{margin:0;padding:20px 32px;max-width:850px;width:100%;flex-shrink:0}#intro.title-menu h1{font-size:2.2rem;line-height:1.15;margin:0 0 12px}#intro.title-menu .intro-copy>p:first-of-type{margin-top:12px}#intro.title-menu .title-options{grid-template-columns:repeat(3,minmax(0,1fr));max-width:none;margin-top:12px}#intro.title-menu .title-options button{padding:12px;min-height:48px;text-align:center}#intro.title-menu .intro-bottom{position:static;display:flex;flex-shrink:0;padding:0 32px 20px;justify-content:flex-start;gap:20px}}
+
+/* Opening handoff keeps the last gameplay frame over the title while it dissolves. */
+#opening{opacity:1;transition:opacity 800ms ease-in-out}#opening.is-leaving{opacity:0;pointer-events:none}#opening-sound{position:absolute;left:24px;bottom:max(24px,env(safe-area-inset-bottom));background:var(--front-shade);color:var(--front-ink);border-color:var(--front-line);min-height:44px}#opening.is-leaving button{visibility:hidden}@media(max-width:600px){#opening-sound{left:16px;bottom:20px}}@media(prefers-reduced-motion:reduce){#opening{transition:none}}
+
+#opening-sound:focus-visible,#opening-skip:focus-visible{outline:2px solid var(--focus);outline-offset:4px}#opening-sound:active,#opening-skip:active{background:var(--front-night)}h1,h2{text-wrap:balance}#front-status{font-variant-numeric:tabular-nums}

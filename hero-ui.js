@@ -1,12 +1,12 @@
-import {repairCost} from './balance-tuning.js?v=5.4.0';
-import {robotParts,occupancy,updateRobotProgress} from './robot-progress.js?v=5.4.0';
-import {robotWeapons} from './robot-specs.js?v=5.4.0';
-import {machinePrice,weaponUpgradeCost} from './economy.js?v=5.4.0';
-import {weatherHandling} from './weather.js?v=5.4.0';
-import {daySeconds,population,weaponSpecs,machinePrices,shopPurchase,shopAt,updateLife} from './hero-life.js?v=5.4.0';
-import {activeWeapon} from './hero-combat.js?v=5.4.0';
-import {vehicles} from './vehicle-specs.js?v=5.4.0';
-import {jobTypes,stopWork} from './jobs.js?v=5.4.0';
+import {repairCost} from './balance-tuning.js?v=5.5.0';
+import {robotParts,occupancy,updateRobotProgress} from './robot-progress.js?v=5.5.0';
+import {robotWeapons} from './robot-specs.js?v=5.5.0';
+import {machinePrice,weaponUpgradeCost} from './economy.js?v=5.5.0';
+import {weatherHandling} from './weather.js?v=5.5.0';
+import {daySeconds,population,weaponSpecs,machinePrices,shopPurchase,shopAt,updateLife} from './hero-life.js?v=5.5.0';
+import {activeWeapon} from './hero-combat.js?v=5.5.0';
+import {vehicles} from './vehicle-specs.js?v=5.5.0';
+import {jobTypes,stopWork} from './jobs.js?v=5.5.0';
 const $=id=>document.getElementById(id);
 export function mountHeroHud({state,renderer,toggleWork,openShop,chooseTarget,defend}){
  $('work-quick').addEventListener('click',toggleWork);

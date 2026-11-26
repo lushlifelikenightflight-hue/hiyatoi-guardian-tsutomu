@@ -46,3 +46,5 @@ Destroy King (2026-11-24): original AI-generated orthographic concepts, processe
 怪獣迎撃マーチ・ロング版 / 2026-11-24: MiniMax Music3による歌なしの異なる3生成音源を各1回使用し、主題/展開/終盤として編集。127.489秒。継ぎ目3.75秒クロスフェード、RMSを整え一定ゲインでマスタリング。長さ上限160秒の2試行が29.559秒/79.192秒で終了したため、単独出力を長尺完成とは扱わず楽章を編集した。条件/入力SHA/原FLAC参照はwork/audio/tokusatsu-long-v2/manifest.json。既存曲の音源/旋律は使用せず、歌詞/歌声なし設定。
 
 2026-11-24訂正: 以前の「歌声なし」は生成指示であり、実音声に歌声が混入していた。4.1.3は既存htdemucs_6sでvocalsを除去したguardian-battle-instrumental.oggへ更新。利用者が冒頭20秒で歌声が消えたと確認。全曲の人による聴感確認とは区別。旧音源は復旧/比較用。分離器の出典/ライセンスは音源分離スタジオvendor/及びwork/provenance.jsonを参照。
+
+こもれびワークス / 2026-11-27: 既存のオリジナルタイトル旋律を96BPM/32小節/80秒に編曲。電気ピアノ、ベース、グロッケン、軽いドラムを数式合成。歌声/コーラス/音声モデル/外部サンプルは使用していません。tools/make-opening-score.pyが正本。ムービー音声とタイトル継続再生用のopening-title.oggに使用。

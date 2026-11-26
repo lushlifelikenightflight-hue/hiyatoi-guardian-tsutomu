@@ -1,4 +1,4 @@
-import {world,roads,destinations,blocked,isDestroyed,responseRoadPath} from './world.js?v=5.4.0';
+import {world,roads,destinations,blocked,isDestroyed,responseRoadPath} from './world.js?v=5.5.0';
 
 export function roadside(o,radius=11){
  let best=null,gap=Infinity;

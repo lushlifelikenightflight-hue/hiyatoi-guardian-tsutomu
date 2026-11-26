@@ -1,4 +1,4 @@
-import {RAIL,STATION,SOUTH_STATION,crossings,railLength,railPose} from './rail-layout.js?v=5.4.0';
+import {RAIL,STATION,SOUTH_STATION,crossings,railLength,railPose} from './rail-layout.js?v=5.5.0';
 
 const speed=68,dwell=6,spacing=90,tailLength=3*spacing;
 const eastStop=STATION.x-RAIL.x0;

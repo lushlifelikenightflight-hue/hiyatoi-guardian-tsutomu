@@ -24,7 +24,7 @@ const themes={
   [62,65,69,null],[70,null,74,72],[69,65,60,null],[64,67,72,null]]}
 };
 
-const studioTracks={drive:'assets/town-drive.ogg',night:'assets/town-night.ogg',battle:'assets/guardian-battle-instrumental.ogg'};
+const studioTracks={title:'assets/opening-title.ogg',drive:'assets/town-drive.ogg',night:'assets/town-night.ogg',battle:'assets/guardian-battle-instrumental.ogg'};
 export const defaultBgmGain=.9;
 
 export class SceneMusic {
@@ -38,6 +38,7 @@ export class SceneMusic {
   this.timer=null;
   this.track=null;
   this.trackCache=new Map();
+  this.trackStarts=0;this.trackStartedAt=0;
  }
  setScene(scene){
   if(scene===this.scene)return;
@@ -81,9 +82,8 @@ export class SceneMusic {
     bar++;
    }
   };
-  schedule();
-  this.timer=setInterval(schedule,95);
   const track=studioTracks[scene];
+  if(!track){schedule();this.timer=setInterval(schedule,95);}
   if(track){
    if(!this.trackCache.has(track)){
     const data=fetch(track).then(r=>{if(!r.ok)throw Error('BGM unavailable');return r.arrayBuffer();})
@@ -91,17 +91,18 @@ export class SceneMusic {
     this.trackCache.set(track,data);
    }
    this.trackCache.get(track).then(buffer=>{
-    if(!buffer||this.bus!==bus)return;
+    if(this.bus!==bus)return;
+    if(!buffer){schedule();this.timer=setInterval(schedule,95);return;}
     clearInterval(this.timer);
     const source=context.createBufferSource(),fade=context.createGain();
     source.buffer=buffer;source.loop=true;
     fade.gain.value=0;fade.gain.setTargetAtTime(.80,context.currentTime,.24);
     source.connect(fade).connect(bus);source.start();
-    this.track=source;
+    this.track=source;this.trackStartedAt=context.currentTime;this.trackStarts++;
    });
   }
  }
- status(){return {scene:this.scene,context:this.context.state,recorded:Boolean(this.track),loop:this.track?.loop??false,duration:this.track?.buffer?.duration??0,asset:studioTracks[this.scene]??null};}
+ status(){return {scene:this.scene,context:this.context.state,recorded:Boolean(this.track),loop:this.track?.loop??false,duration:this.track?.buffer?.duration??0,asset:studioTracks[this.scene]??null,starts:this.trackStarts,position:this.track?(this.context.currentTime-this.trackStartedAt)%this.track.buffer.duration:0};}
  tone(bus,midi,start,length,volume,type){
   const context=this.context,osc=context.createOscillator(),gain=context.createGain();
   osc.type=type;

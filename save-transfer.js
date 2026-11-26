@@ -1,4 +1,4 @@
-import {decodeSave,encodeSave} from './physics.js?v=5.4.0';
+import {decodeSave,encodeSave} from './physics.js?v=5.5.0';
 export const saveFileLimit=2*1024*1024;
 export function makeTransfer(state,best=null){return JSON.stringify({format:'tsutomu-save',formatVersion:1,save:JSON.parse(encodeSave(state)),best},null,2);}
 export function parseTransfer(text){

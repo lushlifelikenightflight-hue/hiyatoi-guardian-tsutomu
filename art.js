@@ -1,6 +1,6 @@
-import {makeCanvas} from './canvas-factory.js?v=5.4.0';
-import {districtStyles} from './neighborhoods.js?v=5.4.0';
-import {random} from './world.js?v=5.4.0';
+import {makeCanvas} from './canvas-factory.js?v=5.5.0';
+import {districtStyles} from './neighborhoods.js?v=5.5.0';
+import {random} from './world.js?v=5.5.0';
 export const PALETTE={ink:'#233c3c',shadow:'#243e3d',grass:'#597a54',road:'#75827c',paving:'#b7baa0',water:'#548e87'};
 export const YAW=-Math.PI/5,PITCH=.72,C=Math.cos(YAW),S=Math.sin(YAW);
 export function project(x,y,z=0){return {x:C*x-S*y,y:(S*x+C*y)*PITCH-z};}

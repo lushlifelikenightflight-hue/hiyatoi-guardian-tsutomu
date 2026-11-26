@@ -1,4 +1,4 @@
-import {vehicles} from './vehicle-specs.js?v=5.4.0';
+import {vehicles} from './vehicle-specs.js?v=5.5.0';
 const lines=[
  'まずは気楽に街をひと回り。道や設備の様子を見て回る仕事さ。散歩みたいでお金がもらえる。ぼく向きだろ？',
  'このバンなら荷物がたっぷり積めるね。ポストまで配達して回ろう。手紙もぼくの稼ぎも、ちゃんと届くように頼むよ。',

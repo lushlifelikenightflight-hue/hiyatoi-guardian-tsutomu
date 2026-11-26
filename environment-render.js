@@ -1,7 +1,7 @@
-import {makeCanvas} from './canvas-factory.js?v=5.4.0';
-import {drawPixelVfx} from './pixel-vfx.js?v=5.4.0';
-import {weatherRandom} from './weather.js?v=5.4.0';
-import {isDestroyed} from './world.js?v=5.4.0';
+import {makeCanvas} from './canvas-factory.js?v=5.5.0';
+import {drawPixelVfx} from './pixel-vfx.js?v=5.5.0';
+import {weatherRandom} from './weather.js?v=5.5.0';
+import {isDestroyed} from './world.js?v=5.5.0';
 export function industrialStack(b){
  const w=Math.ceil(b.w/2),d=Math.ceil(b.d/2),h=Math.ceil(b.h/2),layers=[];
  for(let z=0;z<h;z++){const im=makeCanvas();im.width=w;im.height=d;const g=im.getContext('2d');

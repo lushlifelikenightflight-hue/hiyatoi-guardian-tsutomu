@@ -1,6 +1,6 @@
-import {cityObjectActive} from './city-evolution.js?v=5.4.0';
-import {machineGarages} from './garage-sites.js?v=5.4.0';
-import {world} from './world.js?v=5.4.0';
+import {cityObjectActive} from './city-evolution.js?v=5.5.0';
+import {machineGarages} from './garage-sites.js?v=5.5.0';
+import {world} from './world.js?v=5.5.0';
 export function rebuildingSigns(s){return world.buildings.filter(b=>cityObjectActive(s,b)&&b.kind==='building'&&(s.damage[b.id]??0)>0&&s.hero.rebuild[b.id]!==undefined&&s.time>=s.hero.rebuild[b.id]).map(b=>({x:b.x,y:b.y,height:b.h+18,label:'再建設中',id:b.id}));}
 export function drawGarageGlow(r,s){const g=r.g,z=r.zoom,pulse=r.reduced?1:.88+.12*Math.sin(s.time*2.5);g.save();
  for(const b of machineGarages){const c=Math.cos(b.heading),n=Math.sin(b.heading),points=[[-44,-42],[44,-42],[44,46],[-44,46]].map(([x,y])=>r.screen(b.x+c*x-n*y,b.y+n*x+c*y,2));

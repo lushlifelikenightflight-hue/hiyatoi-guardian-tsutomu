@@ -1,4 +1,4 @@
-import {groundHeight} from './elevation.js?v=5.4.0';
+import {groundHeight} from './elevation.js?v=5.5.0';
 export const rifleBarrel={reach:31.35,boreHeight:6.6,nativeNose:'-y'};
 const clamp=x=>Math.max(0,Math.min(1,x)),mix=(a,b,t)=>a+(b-a)*t,smooth=x=>{x=clamp(x);return x*x*(3-2*x);};
 export const robotTimings={raise:.22,swordWindup:.24,swordHit:.36,swordEnd:.78};

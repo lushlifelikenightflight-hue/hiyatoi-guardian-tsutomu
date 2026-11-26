@@ -1,7 +1,7 @@
-import {traceVolumeSegment} from './weapon-volume.js?v=5.4.0';
-import {robotWeapon,weaponMuzzle} from './robot-motion.js?v=5.4.0';
-import {world,isDestroyed} from './world.js?v=5.4.0';
-import {bodyOpacity} from './wreckage.js?v=5.4.0';
+import {traceVolumeSegment} from './weapon-volume.js?v=5.5.0';
+import {robotWeapon,weaponMuzzle} from './robot-motion.js?v=5.5.0';
+import {world,isDestroyed} from './world.js?v=5.5.0';
+import {bodyOpacity} from './wreckage.js?v=5.5.0';
 export function rayCircle(x,y,c,n,target,radius,range){const dx=target.x-x,dy=target.y-y,along=dx*c+dy*n,side=dx*n-dy*c;if(Math.abs(side)>radius)return null;const offset=Math.sqrt(Math.max(0,radius*radius-side*side)),near=along-offset,far=along+offset;return far>=0&&near<=range?Math.max(0,near):null;}
 export function rayObject(x,y,c,n,o,width,range){if(o.circle)return rayCircle(x,y,c,n,o,(o.r??7)+width,range);const a=o.angle??0,co=Math.cos(a),si=Math.sin(a),dx=x-o.x,dy=y-o.y,origin=[dx*co+dy*si,-dx*si+dy*co],direction=[c*co+n*si,-c*si+n*co],extent=[o.w/2+width,o.d/2+width];let lo=0,hi=range;for(let i=0;i<2;i++){if(Math.abs(direction[i])<1e-8){if(Math.abs(origin[i])>extent[i])return null;continue;}const a=(-extent[i]-origin[i])/direction[i],b=(extent[i]-origin[i])/direction[i];lo=Math.max(lo,Math.min(a,b));hi=Math.min(hi,Math.max(a,b));if(lo>hi)return null;}return lo<=range?lo:null;}
 function traceLine(s,w){

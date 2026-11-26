@@ -1,6 +1,6 @@
-import {queueVehicleTalk} from './vehicle-talk.js?v=5.4.0';
-import {roads,WEST_EDGE,SIZE,world,spots} from './world.js?v=5.4.0';
-import {segmentDistance} from './geometry.js?v=5.4.0';
+import {queueVehicleTalk} from './vehicle-talk.js?v=5.5.0';
+import {roads,WEST_EDGE,SIZE,world,spots} from './world.js?v=5.5.0';
+import {segmentDistance} from './geometry.js?v=5.5.0';
 export const ROBOT_INDEX=10;
 export const robotParts=[
  {id:'right-arm',name:'封印されしロボの右腕',cost:18000,condition:'4日目に到達',test:(s,p)=>s.hero.day>=4},

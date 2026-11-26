@@ -1,45 +1,45 @@
-import {mountWorkCompass} from './work-compass.js?v=5.4.0';
-import {mountSaveTransfer} from './save-transfer.js?v=5.4.0';
-import {mountTitleFlow} from './title-flow.js?v=5.4.0';
-import {readResume,beginNewSave} from './title-session.js?v=5.4.0';
-import {mountCityCareer} from './city-career-ui.js?v=5.4.0';
-import {cityObjectActive} from './city-evolution.js?v=5.4.0';
-import {lessons,tutorialReady,finishLesson,updateMedals,medals} from './career-progress.js?v=5.4.0';
-import {vehicleIntroduction} from './vehicle-talk.js?v=5.4.0';
-import {machinePrice} from './economy.js?v=5.4.0';
-import {garageContaining} from './garage-sites.js?v=5.4.0';
-import {loadPixelVfx} from './pixel-vfx.js?v=5.4.0';
-import {bindButtonGuards} from './button-guards.js?v=5.4.0';
-import {updateWeatherHazards} from './weather-effects.js?v=5.4.0';
-import {introduction,raidMessage,mountNarration} from './tsutomu-story.js?v=5.4.0';
-import {chooseMusicScene} from './music-scene.js?v=5.4.0';
-import {updateLife,daySeconds,weaponSpecs,population} from './hero-life.js?v=5.4.0';
-import {updateCombat} from './hero-combat.js?v=5.4.0';
-import {mountHeroHud} from './hero-ui.js?v=5.4.0';
-import {railSurface,enteredRailGuide,exitedRailGuide,railAccessPoints} from './rail-drive.js?v=5.4.0';
+import {mountWorkCompass} from './work-compass.js?v=5.5.0';
+import {mountSaveTransfer} from './save-transfer.js?v=5.5.0';
+import {mountTitleFlow} from './title-flow.js?v=5.5.0';
+import {readResume,beginNewSave} from './title-session.js?v=5.5.0';
+import {mountCityCareer} from './city-career-ui.js?v=5.5.0';
+import {cityObjectActive} from './city-evolution.js?v=5.5.0';
+import {lessons,tutorialReady,finishLesson,updateMedals,medals} from './career-progress.js?v=5.5.0';
+import {vehicleIntroduction} from './vehicle-talk.js?v=5.5.0';
+import {machinePrice} from './economy.js?v=5.5.0';
+import {garageContaining} from './garage-sites.js?v=5.5.0';
+import {loadPixelVfx} from './pixel-vfx.js?v=5.5.0';
+import {bindButtonGuards} from './button-guards.js?v=5.5.0';
+import {updateWeatherHazards} from './weather-effects.js?v=5.5.0';
+import {introduction,raidMessage,mountNarration} from './tsutomu-story.js?v=5.5.0';
+import {chooseMusicScene} from './music-scene.js?v=5.5.0';
+import {updateLife,daySeconds,weaponSpecs,population} from './hero-life.js?v=5.5.0';
+import {updateCombat} from './hero-combat.js?v=5.5.0';
+import {mountHeroHud} from './hero-ui.js?v=5.5.0';
+import {railSurface,enteredRailGuide,exitedRailGuide,railAccessPoints} from './rail-drive.js?v=5.5.0';
 let chaseResult=null;
-import {rememberJob} from './job-contracts.js?v=5.4.0';
-import {servicePhase,jobFeedbackSeconds} from './job-service.js?v=5.4.0';
-import {guidanceTarget} from './road-guidance.js?v=5.4.0';
-import {moveToChallengeStart} from './challenge-start.js?v=5.4.0';
-import {mountGarage} from './garage-ui.js?v=5.4.0';
-import {garageAt} from './upgrades.js?v=5.4.0';
-import {jobTypes,availableJob,jobTarget,updateJob,startWork,stopWork} from './jobs.js?v=5.4.0';
-import {groundHeight,roadGrade} from './elevation.js?v=5.4.0';
-import {beginPursuit,chaseLimit,escapeStart,pursuitGoal,updatePursuit} from './pursuit.js?v=5.4.0';
-import {beginParkTrial,parkGates,updateParkTrial} from './park-trial.js?v=5.4.0';
-import {ambulanceVisible,dispatchAmbulance,updateAmbulances} from './ambulance.js?v=5.4.0';
-import {bodyOpacity, WRECK_DURATION} from './wreckage.js?v=5.4.0';
-import {DriveSound} from './drive-sound.js?v=5.4.0';
-import {createPedestrians,updatePedestrians} from './pedestrians.js?v=5.4.0';
-import {SceneMusic} from './music.js?v=5.4.0';
-import {createTraffic,updateTraffic} from './traffic.js?v=5.4.0';
-import {bindPedals} from './drive-controls.js?v=5.4.0';
-import {Renderer} from './renderer.js?v=5.4.0';
-import {vehicles,vehicleStats,createState,step,rescue,repair,recoverySites,switchVehicle,decodeSave,encodeSave,destroyedCount,rebuildTown,collideWithTraffic} from './physics.js?v=5.4.0';
-import {mapView} from './map-view.js?v=5.4.0';
-import {NORTH_LIMIT} from './south.js?v=5.4.0';
-import {spots,destinations,SPAWN,world} from './world.js?v=5.4.0';
+import {rememberJob} from './job-contracts.js?v=5.5.0';
+import {servicePhase,jobFeedbackSeconds} from './job-service.js?v=5.5.0';
+import {guidanceTarget} from './road-guidance.js?v=5.5.0';
+import {moveToChallengeStart} from './challenge-start.js?v=5.5.0';
+import {mountGarage} from './garage-ui.js?v=5.5.0';
+import {garageAt} from './upgrades.js?v=5.5.0';
+import {jobTypes,availableJob,jobTarget,updateJob,startWork,stopWork} from './jobs.js?v=5.5.0';
+import {groundHeight,roadGrade} from './elevation.js?v=5.5.0';
+import {beginPursuit,chaseLimit,escapeStart,pursuitGoal,updatePursuit} from './pursuit.js?v=5.5.0';
+import {beginParkTrial,parkGates,updateParkTrial} from './park-trial.js?v=5.5.0';
+import {ambulanceVisible,dispatchAmbulance,updateAmbulances} from './ambulance.js?v=5.5.0';
+import {bodyOpacity, WRECK_DURATION} from './wreckage.js?v=5.5.0';
+import {DriveSound} from './drive-sound.js?v=5.5.0';
+import {createPedestrians,updatePedestrians} from './pedestrians.js?v=5.5.0';
+import {SceneMusic} from './music.js?v=5.5.0';
+import {createTraffic,updateTraffic} from './traffic.js?v=5.5.0';
+import {bindPedals} from './drive-controls.js?v=5.5.0';
+import {Renderer} from './renderer.js?v=5.5.0';
+import {vehicles,vehicleStats,createState,step,rescue,repair,recoverySites,switchVehicle,decodeSave,encodeSave,destroyedCount,rebuildTown,collideWithTraffic} from './physics.js?v=5.5.0';
+import {mapView} from './map-view.js?v=5.5.0';
+import {NORTH_LIMIT} from './south.js?v=5.5.0';
+import {spots,destinations,SPAWN,world} from './world.js?v=5.5.0';
 const $=id=>document.getElementById(id),params=new URLSearchParams(location.search),local=['127.0.0.1','localhost'].includes(location.hostname),qa=false;
 bindButtonGuards(document,window);
 const workCompass=mountWorkCompass(document.getElementById('game'));
@@ -94,29 +94,31 @@ function maybeVehicleTalk(){if(storyGate||progressUI.mode||!started||map||photo|
 function showTutorial(){storyGate=true;clearInput();$('toast').hidden=true;requestAnimationFrame(()=>{if(storyGate)narration.open('intro',[lessons[0]]);});}
 function showRaidWarning(){const m=state.hero.monster;if(!m||m.phase==='retreating')return;announcedMonster=m;state.hero.guideMonster=true;state.serviceGuide=null;state.trial=null;state.pursuit=null;syncChallengeControls();storyGate=true;clearInput();$('toast').hidden=true;requestAnimationFrame(()=>{if(storyGate)narration.open('raid',raidMessage(m));});syncMusic();}
 const musicKey=qa?'komorebi-bgm-test':'komorebi-bgm';
-let music=null,bgmEnabled=true,bgmPending=false;
+let music=null,bgmEnabled=true;
 try{bgmEnabled=localStorage.getItem(musicKey)!=='off';}catch{}
 function musicScene(){return chooseMusicScene({hidden:document.hidden,enabled:bgmEnabled,started,monster:Boolean(state.hero.monster),paused,map,photo,broken:state.broken,night:renderer.mode==='night'});}
 function syncMusic(){
  music?.setScene(musicScene());
- const active=!!music?.scene;
+ const active=!!music?.scene&&music.context.state==='running';
+ $('opening-sound').textContent=active?'BGM：ON':bgmEnabled?'音を出す':'BGM：OFF';$('opening-sound').setAttribute('aria-pressed',String(active));
  $('title-music').textContent=active?'BGM：ON':'BGM：OFF';
  $('bgm-button').textContent=active?'BGM：ON':'BGM：OFF';
  for(const id of ['title-music','bgm-button'])$(id).setAttribute('aria-pressed',String(active));
  if(qa)$('game').dataset.bgmScene=music?.scene??'off';
 }
 async function unlockMusic(){
- if(!bgmEnabled||bgmPending)return;
- bgmPending=true;
+ if(!bgmEnabled)return;
  try{
   music??=new SceneMusic(new AudioContext());
+  music.context.onstatechange=syncMusic;
+  syncMusic();
   await music.context.resume();
   syncMusic();
  }catch{notify('このブラウザーではBGMを再生できません。');}
- finally{bgmPending=false;}
 }
+function openingSound(){if(!music?.scene||music.context.state!=='running'){bgmEnabled=true;try{localStorage.setItem(musicKey,'on');}catch{}void unlockMusic();}else toggleMusic();}
 function toggleMusic(){
- bgmEnabled=!music?.scene;
+ bgmEnabled=!(music?.scene&&music.context.state==='running');
  try{localStorage.setItem(musicKey,bgmEnabled?'on':'off');}catch{}
  if(bgmEnabled)void unlockMusic();else syncMusic();
 }
@@ -127,7 +129,9 @@ function save(){if(transferReplacing||!sessionWritable)return;const at=performan
 function hud(visible){document.querySelectorAll('.hud').forEach(el=>el.hidden=!visible);if(visible){$('touch-controls').hidden=false;}}
 function start({skipIntro=false}={}){sessionWritable=true;front.playing();storyFixture=qa&&skipIntro;started=true;void unlockMusic();void enableDriveSound();paused=false;$('intro').hidden=true;hud(true);renderer.camera.x=state.x;renderer.camera.y=state.y;renderer.camera.z=groundHeight(state.x,state.y);save();updateUI();if(!skipIntro&&!state.hero.introSeen)showTutorial();else if(state.hero.monster&&!storyFixture)showRaidWarning();else $('toast').hidden=true;}
 function resetRun(next){Object.assign(state,next);state.traffic=createTraffic(state);state.crowd=createPedestrians(state.time);updatePedestrians(state.crowd,state.traffic,state,state.time,0);trafficElapsed=0;announcedMonster=null;lastGarageInside=garageContaining(state)?.id;garageEntryPending=false;target='station';chaseResult=null;currentVehicleTalk=null;clearInput();syncChallengeControls();}
-const front=mountTitleFlow({hasResume:()=>Boolean(readResume(localStorage,saveKey)),hasRaw:()=>{try{return localStorage.getItem(saveKey)!==null;}catch{return false;}},onGesture:()=>void unlockMusic(),onContinue:()=>{start();},onNew:()=>{const next=beginNewSave(localStorage,saveKey);trialBest=null;resetRun(next);start();}});
+const front=mountTitleFlow({hasResume:()=>Boolean(readResume(localStorage,saveKey)),hasRaw:()=>{try{return localStorage.getItem(saveKey)!==null;}catch{return false;}},onGesture:()=>void unlockMusic(),onSound:openingSound,onContinue:()=>{start();},onNew:()=>{const next=beginNewSave(localStorage,saveKey);trialBest=null;resetRun(next);start();}});
+void unlockMusic();
+syncMusic();
 function returnTitle(){save();started=false;sessionWritable=false;paused=false;clearInput();$('menu').hidden=true;$('toast').hidden=true;hud(false);$('touch-controls').hidden=true;front.returnTitle();updateUI();syncMusic();}
 function setMenu(open){paused=open;clearInput();$('menu').hidden=!open;if(open){refreshJobOffers();lastFocus=document.activeElement;$('close-menu').focus();}else{lastFocus?.focus();}}
 let garageOpen=false,garageReturnMenu=false,vehiclePicker=false,lastGarageInside=garageContaining(state)?.id,garageEntryPending=false;

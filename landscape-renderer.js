@@ -1,7 +1,7 @@
-import {makeCanvas} from './canvas-factory.js?v=5.4.0';
-import {C,S,PITCH,project,treeStack,bakeStack,drawSprite} from './art.js?v=5.4.0';
-import {DRIVE_BOUNDS} from './world.js?v=5.4.0';
-import {hillHeight,outskirtsHash,smooth,terrainProfile,visibleClouds} from './outskirts.js?v=5.4.0';
+import {makeCanvas} from './canvas-factory.js?v=5.5.0';
+import {C,S,PITCH,project,treeStack,bakeStack,drawSprite} from './art.js?v=5.5.0';
+import {DRIVE_BOUNDS} from './world.js?v=5.5.0';
+import {hillHeight,outskirtsHash,smooth,terrainProfile,visibleClouds} from './outskirts.js?v=5.5.0';
 
 const mix=(a,b,t)=>a+(b-a)*t;
 const point=(x,y)=>[C*x+S*y/PITCH,-S*x+C*y/PITCH];

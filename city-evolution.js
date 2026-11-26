@@ -1,5 +1,5 @@
-import {FALLEN_DURATION,RECOVERY_DELAY} from './pedestrian-incidents.js?v=5.4.0';
-import {recordAbsence} from './citizen-recovery.js?v=5.4.0';
+import {FALLEN_DURATION,RECOVERY_DELAY} from './pedestrian-incidents.js?v=5.5.0';
+import {recordAbsence} from './citizen-recovery.js?v=5.5.0';
 // Persistent weekly town decisions. Pure definitions also used by collision/render/save.
 export const cityChoices=[
  ['arrival','人口が増えた','新しい住民を迎える','新住民を迎え、交通も少し増える。',{population:240,reward:.02,traffic:.05},'livelihood','population'],
