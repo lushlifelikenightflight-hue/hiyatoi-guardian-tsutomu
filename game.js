@@ -32,7 +32,7 @@ import {ambulanceVisible,dispatchAmbulance,updateAmbulances} from './ambulance.j
 import {bodyOpacity, WRECK_DURATION} from './wreckage.js?v=5.6.1';
 import {DriveSound} from './drive-sound.js?v=5.6.1';
 import {createPedestrians,updatePedestrians} from './pedestrians.js?v=5.6.1';
-import {SceneMusic} from './music.js?v=5.6.1';
+import {SceneMusic} from './music.js?v=5.6.3';
 import {createTraffic,updateTraffic} from './traffic.js?v=5.6.1';
 import {bindPedals} from './drive-controls.js?v=5.6.1';
 import {Renderer} from './renderer.js?v=5.6.1';
