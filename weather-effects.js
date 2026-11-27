@@ -1,9 +1,9 @@
-import {harmCitizen} from './city-evolution.js?v=5.5.0';
-import {weatherRandom} from './weather.js?v=5.5.0';
-import {damageVehicle} from './physics.js?v=5.5.0';
-import {hurtBuilding} from './hero-life.js?v=5.5.0';
-import {world} from './world.js?v=5.5.0';
-import {damageTraffic} from './traffic.js?v=5.5.0';
+import {harmCitizen} from './city-evolution.js?v=5.6.0';
+import {weatherRandom} from './weather.js?v=5.6.0';
+import {damageVehicle} from './physics.js?v=5.6.0';
+import {hurtBuilding} from './hero-life.js?v=5.6.0';
+import {world} from './world.js?v=5.6.0';
+import {damageTraffic} from './traffic.js?v=5.6.0';
 export function updateWeatherHazards(s,dt){
  const kind=s.hero.weather.kind;s.weatherHazards??=[];
  if(s.weatherHazardKind!==kind){s.weatherHazardKind=kind;s.nextWeatherHazard=s.time+3;}

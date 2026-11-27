@@ -1,14 +1,14 @@
-import {civicLight,civicSignals} from './city-upgrade.js?v=5.5.0';
-import {roadsidePose,yieldForAmbulance} from './ambulance.js?v=5.5.0';
-import {southTraffic} from './south.js?v=5.5.0';
-import {pedestrianIncidents} from './pedestrian-incidents.js?v=5.5.0';
-import {bodyOpacity} from './wreckage.js?v=5.5.0';
-import {districtTraffic,sideStreetTraffic,turningTraffic} from './districts.js?v=5.5.0';
-import {segmentDistance} from './geometry.js?v=5.5.0';
-import {crossingCoordinates} from './pedestrians.js?v=5.5.0';
-import {avenueJunction,signalState} from './signals.js?v=5.5.0';
-import {crossings} from './world.js?v=5.5.0';
-import {crossingActive} from './railway.js?v=5.5.0';
+import {civicLight,civicSignals} from './city-upgrade.js?v=5.6.0';
+import {roadsidePose,yieldForAmbulance} from './ambulance.js?v=5.6.0';
+import {southTraffic} from './south.js?v=5.6.0';
+import {pedestrianIncidents} from './pedestrian-incidents.js?v=5.6.0';
+import {bodyOpacity} from './wreckage.js?v=5.6.0';
+import {districtTraffic,sideStreetTraffic,turningTraffic} from './districts.js?v=5.6.0';
+import {segmentDistance} from './geometry.js?v=5.6.0';
+import {crossingCoordinates} from './pedestrians.js?v=5.6.0';
+import {avenueJunction,signalState} from './signals.js?v=5.6.0';
+import {crossings} from './world.js?v=5.6.0';
+import {crossingActive} from './railway.js?v=5.6.0';
 
 // Each itinerary lies on the authored network. Offset to the left in the
 // direction of travel, and round the lane joins inside the intersection.

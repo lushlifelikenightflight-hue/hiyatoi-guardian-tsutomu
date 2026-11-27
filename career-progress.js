@@ -15,13 +15,13 @@ export function updateMedals(s){const p=s.hero.career,got=[];for(const m of meda
 export const newTutorial=()=>({stage:0,elapsed:0,since:0});
 export function validTutorial(t){return t===undefined||Boolean(t&&Number.isInteger(t.stage)&&t.stage>=0&&t.stage<=6&&Number.isFinite(t.elapsed)&&t.elapsed>=0&&t.elapsed<1e9&&Number.isFinite(t.since)&&t.since>=0&&t.since<=t.elapsed);}
 export const lessons=[
- {title:'相棒、まずはひと回り',text:'やぁ、新しいオペレーターくん。ぼくはつとむ。この街の働き手で、たまにヒーローさ。\nまずはアクセルと左右のハンドルで、近所を走ってみよう。W・A・S・Dでも画面のボタンでも動けるよ。'},
+ {title:'相棒、まずはひと回り',text:'よし、相棒。まずはアクセルと左右のハンドルで、近所を走ってみよう。\nW・A・S・Dでも画面のボタンでも動けるよ。'},
  {title:'止まれるのも腕のうち',text:'いい感じだね。曲がり角や人のそばではゆっくりいこう。\nSpaceはブレーキ。後退ボタンかSでバックもできる。地図はMか右上の地図ボタンだよ。'},
  {title:'さて、ひと稼ぎ',text:'ぼくは日雇いで暮らしている。スクーターなら出前、軽バンなら配達だ。\n「仕事を始める」かJで受けてみよう。道路の矢印を追えばお客さんや届け先へ行ける。やめたいときも同じボタンでいいよ。'},
  {title:'稼ぎはマシンに',text:'稼いだポイントで、マシンを買ったり強くしたりできるんだ。\n地図のGがガレージ。光る入口に入って止まってみて。乗り物が増えれば、できる仕事も増えるよ。'},
  {title:'ヒーローの準備もね',text:'この街には、ときどき山や海から怪獣が来るんだ。\n武器もガレージで買える。装甲車なら最初から砲が付いているよ。武装したらXか攻撃ボタンで試してみよう。街まで壊しすぎないでね。'},
- {title:'そのうち、街も育つ',text:'ぼくたちの暮らしは街と一緒だ。１週間たつと市民から税収が入る。人口１人につき１ポイントね。\nそのとき街のこれからを３つから選んでほしい。勲章もメニューで見られるよ。じゃ、あとの働き方は相棒に任せる！'}
+ {title:'そのうち、街も育つ',text:'そうだそうだ。１週間おきに市民から税をまきあげてるんだけど、人口１人につき１ポイント吸い上げるシステムだから、あんまり減らさないようにがんばってね。\nそのとき街のこれからを３つから選んでほしい。勲章もメニューで見られるよ。じゃ、あとの働き方は相棒に任せる！'}
 ];
-export function tutorialReady(s){const t=s.hero.tutorial;if(t.stage===0||t.stage>=6||s.hero.monster)return false;const since=t.elapsed-t.since;
+export function tutorialReady(s){const t=s.hero.tutorial;if(t.stage>=6||s.hero.monster)return false;if(t.stage===0)return Boolean(s.hero.introSeen);const since=t.elapsed-t.since;
  return [false,s.distance>=220||since>=25,s.distance>=550||since>=45,s.hero.jobCount>0||since>=100,s.hero.owned.filter(Boolean).length>2||s.hero.weapons.length>0||since>=90,since>=40][t.stage];}
 export function finishLesson(s){const t=s.hero.tutorial;t.stage=Math.min(6,t.stage+1);t.since=t.elapsed;}

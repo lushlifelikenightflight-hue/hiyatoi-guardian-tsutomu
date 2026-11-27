@@ -1,4 +1,4 @@
-import {jobTarget} from './jobs.js?v=5.5.0';
+import {jobTarget} from './jobs.js?v=5.6.0';
 export function workCompassGoal(s){const target=s.work&&jobTarget(s);if(!target||!Number.isFinite(target.x)||!Number.isFinite(target.y))return null;return {...target,x:Number.isFinite(target.siteX)?target.siteX:target.x,y:Number.isFinite(target.siteY)?target.siteY:target.y};}
 export function compassBearing(player,goal){return Math.atan2(goal.y-player.y,goal.x-player.x)+Math.PI/2;}
 export function mountWorkCompass(root){const panel=document.createElement('div');panel.id='work-compass';panel.className='work-compass hud';panel.hidden=true;panel.setAttribute('role','img');

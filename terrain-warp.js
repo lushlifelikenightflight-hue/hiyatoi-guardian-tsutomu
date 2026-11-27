@@ -1,6 +1,6 @@
-import {makeCanvas} from './canvas-factory.js?v=5.5.0';
-import {C,S,PITCH,project} from './art.js?v=5.5.0';
-import {elevations,groundHeight} from './elevation.js?v=5.5.0';
+import {makeCanvas} from './canvas-factory.js?v=5.6.0';
+import {C,S,PITCH,project} from './art.js?v=5.6.0';
+import {elevations,groundHeight} from './elevation.js?v=5.6.0';
 
 export function warpGroundTile(tx,ty,size,flatTile){
  const regions=elevations.filter(r=>{

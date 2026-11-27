@@ -1,10 +1,10 @@
-import {makeCanvas} from './canvas-factory.js?v=5.5.0';
-import {project,YAW,PITCH,drawSprite,bakeStack} from './art.js?v=5.5.0';
+import {makeCanvas} from './canvas-factory.js?v=5.6.0';
+import {project,YAW,PITCH,drawSprite,bakeStack} from './art.js?v=5.6.0';
 let asset=null;
 const sprites=new Map(),UNIT=1.9;
-import {robotPose,robotLayerOffset,robotWeapon,rifleBarrel} from './robot-motion.js?v=5.5.0';
+import {robotPose,robotLayerOffset,robotWeapon,rifleBarrel} from './robot-motion.js?v=5.6.0';
 export {robotPose,robotLayerOffset};
-export async function loadRobotAsset(){if(asset)return;const image=new Image();image.src='assets/robot/destroyking-parts.png?v=5.5.0';await image.decode();const count=80,w=53,d=34;if(image.width!==count*w||image.height!==d*6||image.width%count)throw new Error('ロボの積層画像の寸法が不正です');
+export async function loadRobotAsset(){if(asset)return;const image=new Image();image.src='assets/robot/destroyking-parts.png?v=5.6.0';await image.decode();const count=80,w=53,d=34;if(image.width!==count*w||image.height!==d*6||image.width%count)throw new Error('ロボの積層画像の寸法が不正です');
  const parts=Array.from({length:6},()=>[]);for(let part=0;part<6;part++)for(let z=0;z<count;z++){const im=makeCanvas(w,d),g=im.getContext('2d');g.drawImage(image,z*w,part*d,w,d,0,0,w,d);if(g.getImageData(0,0,w,d).data.some((v,i)=>i%4===3&&v))parts[part].push({z,image:im});}
  asset={parts,w,d,count};
 }

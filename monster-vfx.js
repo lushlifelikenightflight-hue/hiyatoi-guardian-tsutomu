@@ -1,5 +1,5 @@
-import {monsterAttacks,beamHeightAt} from './monster-attacks.js?v=5.5.0';
-import {drawPixelVfx} from './pixel-vfx.js?v=5.5.0';
+import {monsterAttacks,beamHeightAt} from './monster-attacks.js?v=5.6.0';
+import {drawPixelVfx} from './pixel-vfx.js?v=5.6.0';
 
 function outline(r,a,fill,stroke){
  const g=r.g,spec=monsterAttacks[a.kind],point=(x,y)=>r.screen(x,y,3),at=(d,t)=>point(a.x+Math.cos(t)*d,a.y+Math.sin(t)*d);

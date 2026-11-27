@@ -1,8 +1,8 @@
-import {Renderer} from './scene-renderer.js?v=5.5.0';
-import {LandscapeRenderer} from './landscape-renderer.js?v=5.5.0';
-import {warpGroundTile} from './terrain-warp.js?v=5.5.0';
-import {world} from './world.js?v=5.5.0';
-import {project} from './art.js?v=5.5.0';
+import {Renderer} from './scene-renderer.js?v=5.6.0';
+import {LandscapeRenderer} from './landscape-renderer.js?v=5.6.0';
+import {warpGroundTile} from './terrain-warp.js?v=5.6.0';
+import {world} from './world.js?v=5.6.0';
+import {project} from './art.js?v=5.6.0';
 const renderer=Object.assign(Object.create(Renderer.prototype),{flatTiles:new Map(),landscape:new LandscapeRenderer()}),jobs=new Map();let running=false,focus={x:0,y:0};
 self.onmessage=({data})=>{if(data.kind==='view'){focus=data;return;}jobs.set(data.key,data);if(!running){running=true;setTimeout(run,0);}};
 function score(job){const p=job.kind==='ground'?{x:job.x+384,y:job.y+384}:project(world.byId.get(job.id)?.x??0,world.byId.get(job.id)?.y??0);return Math.hypot(p.x-focus.x,p.y-focus.y)+(job.kind==='object'?450:job.visible?-2000:0);}

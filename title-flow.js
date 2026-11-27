@@ -1,4 +1,4 @@
-import {frontTransition} from './title-session.js?v=5.5.0';
+import {frontTransition} from './title-session.js?v=5.6.0';
 export function mountTitleFlow({hasResume,hasRaw,onContinue,onNew,onGesture,onSound}){
  const $=id=>document.getElementById(id),video=$('opening-video'),opening=$('opening'),reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;let phase='movie',ready=false,stallTimer,leaving=false,leaveTimer;
  const consumed=new Set();

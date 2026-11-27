@@ -10,6 +10,8 @@ export const introduction=[
  {title:'暮らしを守るということ',text:'建物が壊れたり人に被害が出たりすると、街の人口が減るんだ。ぼくたちの運転や武器でも被害が出るから気をつけて。\n建物は時間がたつと少しずつ再建され、人口も戻ってくるよ。アジトでは翌朝まで休めるけど、怪獣がいる間は休めないんだ。'},
  {title:'そうだそうだ、街の税収',text:'そうだそうだ。１週間おきに市民から税をまきあげてるんだけど、\n人口１人につき１ポイント吸い上げるシステムだから、\nあんまり減らさないようにがんばってね。\n\n7日経過ごとに、そのときの人口と同じポイントが入るよ。最初は8日目の朝だ。'}
 ];
+// Keep the original meeting separate from the gradually unlocked driving lessons.
+export const meeting=introduction.slice(0,4);
 export function raidMessage(monster){return [{title:monster.phase==='approaching'?'緊急指令 / 怪獣接近':'緊急指令 / 怪獣出現',text:(monster.kind?'海側から潮甲獣アオナギ':'山側から岩角獣ガンロウ')+(monster.phase==='approaching'?'が接近中！ まだ街の外だ。':'が現れた！')+'\nオペレーターくん、武装したマシンで迎え撃つ指示を頼むよ。大きな矢印が怪獣の方角だ。\n踏みつけ、爪、光線に隕石まで使ってくるぞ。地面の予兆から離れて、市民と街を守ろう！'}];}
 
 export function mountNarration({onClose}){

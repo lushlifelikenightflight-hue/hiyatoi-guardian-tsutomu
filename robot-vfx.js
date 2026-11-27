@@ -1,4 +1,4 @@
-import {robotWeapon} from './robot-motion.js?v=5.5.0';
+import {robotWeapon} from './robot-motion.js?v=5.6.0';
 // Layered local Canvas effects: bounded analytic particles, no persistent particle objects or new canvases.
 export function drawRobotAttacks(r,s){drawSwordTrail(r,s);const g=r.g,z=r.zoom;let count=0;
  for(let i=(s.combatEffects?.length??0)-1;i>=0;i--){const e=s.combatEffects[i];if(!['robot-rifle','beam-sword'].includes(e.kind)||!e.origin)continue;const age=s.time-e.at,duration=e.kind==='robot-rifle'?.42:.52;if(age<0||age>duration||count++>=8)continue;if(r.reduced&&count>1)continue;

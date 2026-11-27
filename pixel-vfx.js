@@ -1,4 +1,4 @@
-import {vfxCatalog} from './vfx-catalog.js?v=5.5.0';
+import {vfxCatalog} from './vfx-catalog.js?v=5.6.0';
 const sheets=new Map();
 export async function loadPixelVfx(){await Promise.all(Object.keys(vfxCatalog).map(name=>new Promise(resolve=>{const im=new Image();im.onload=()=>{sheets.set(name,im);resolve();};im.onerror=resolve;im.src='assets/vfx/'+name+'.png';})));}
 export function drawPixelVfx(g,name,time,x,y,scale=1,angle=0,options={}){

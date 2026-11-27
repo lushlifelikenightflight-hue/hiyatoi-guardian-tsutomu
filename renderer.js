@@ -1,1 +1,1 @@
-export * from './scene-renderer.js?v=5.5.0';
+export * from './scene-renderer.js?v=5.6.0';

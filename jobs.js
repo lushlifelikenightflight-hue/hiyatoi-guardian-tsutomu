@@ -1,10 +1,10 @@
-import {jobPayout} from './balance-tuning.js?v=5.5.0';
-import {extraJobTypes,extraContract} from './extra-jobs.js?v=5.5.0';
-import {moveToChallengeStart} from './challenge-start.js?v=5.5.0';
-import {roadside,variedContract,demolitionContract,rememberJob} from './job-contracts.js?v=5.5.0';
-import {world,isDestroyed,civicSites,destinations,responseRoadPath} from './world.js?v=5.5.0';
-import {rankJob} from './hero-life.js?v=5.5.0';
-import {captureService,serviceCompletion,serviceSeconds} from './job-service.js?v=5.5.0';
+import {jobPayout} from './balance-tuning.js?v=5.6.0';
+import {extraJobTypes,extraContract} from './extra-jobs.js?v=5.6.0';
+import {moveToChallengeStart} from './challenge-start.js?v=5.6.0';
+import {roadside,variedContract,demolitionContract,rememberJob} from './job-contracts.js?v=5.6.0';
+import {world,isDestroyed,civicSites,destinations,responseRoadPath} from './world.js?v=5.6.0';
+import {rankJob} from './hero-life.js?v=5.6.0';
+import {captureService,serviceCompletion,serviceSeconds} from './job-service.js?v=5.6.0';
 
 export const jobTypes=[
  {id:'taxi',name:'タクシーの送迎',vehicle:6,reward:180},

@@ -1,15 +1,15 @@
-import {cityArmor,harmCitizen,cityObjectActive} from './city-evolution.js?v=5.5.0';
-import {checkMonsterDeadline,updateRetreat,updateApproach,monsterGoal,monsterPower,walkMonster} from './monster-behavior.js?v=5.5.0';
-import {monsterAttacks,chooseMonsterAttack,aimMonsterAttack,armMonsterAttack,scatterMeteorTargets,monsterAttackHits,beamHeightAt} from './monster-attacks.js?v=5.5.0';
-import {updateRobotAttack} from './robot-motion.js?v=5.5.0';
-import {robotWeapons} from './robot-specs.js?v=5.5.0';
-import {weaponTrace} from './weapon-trace.js?v=5.5.0';
-import {dispatchAmbulance} from './ambulance.js?v=5.5.0';
-import {world,isDestroyed,objectHits} from './world.js?v=5.5.0';
-import {vehicleStats} from './upgrades.js?v=5.5.0';
-import {weaponSpecs,hurtBuilding,heroNotice,population} from './hero-life.js?v=5.5.0';
-import {damageTraffic} from './traffic.js?v=5.5.0';
-import {segmentDistance} from './geometry.js?v=5.5.0';
+import {cityArmor,harmCitizen,cityObjectActive} from './city-evolution.js?v=5.6.0';
+import {checkMonsterDeadline,updateRetreat,updateApproach,monsterGoal,monsterPower,walkMonster} from './monster-behavior.js?v=5.6.0';
+import {monsterAttacks,chooseMonsterAttack,aimMonsterAttack,armMonsterAttack,scatterMeteorTargets,monsterAttackHits,beamHeightAt} from './monster-attacks.js?v=5.6.0';
+import {updateRobotAttack} from './robot-motion.js?v=5.6.0';
+import {robotWeapons} from './robot-specs.js?v=5.6.0';
+import {weaponTrace} from './weapon-trace.js?v=5.6.0';
+import {dispatchAmbulance} from './ambulance.js?v=5.6.0';
+import {world,isDestroyed,objectHits} from './world.js?v=5.6.0';
+import {vehicleStats} from './upgrades.js?v=5.6.0';
+import {weaponSpecs,hurtBuilding,heroNotice,population} from './hero-life.js?v=5.6.0';
+import {damageTraffic} from './traffic.js?v=5.6.0';
+import {segmentDistance} from './geometry.js?v=5.6.0';
 
 export function combatEffect(s,kind,x,y,size=45){s.combatEffects??=[];s.combatEffects.push({kind,x,y,size,at:s.time});if(s.combatEffects.length>40)s.combatEffects.shift();}
 export function monsterContact(s,m,old){
