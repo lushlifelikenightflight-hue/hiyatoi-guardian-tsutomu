@@ -1,4 +1,4 @@
-import {railSegments} from './rail-layout.js?v=5.6.0';
+import {railSegments} from './rail-layout.js?v=5.6.1';
 
 export const railEntrances=[
  {id:'rail-west-entry',name:'高架入口・西',x:3180,y:1200,railEntry:true,heading:0,approach:[[3060,1200],[3180,1200]],rampLength:310},

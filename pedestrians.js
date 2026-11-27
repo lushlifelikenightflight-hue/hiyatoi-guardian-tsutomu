@@ -1,15 +1,15 @@
-import {sidewalkWidth} from './street-space.js?v=5.6.0';
-import {railClearance} from './rail-layout.js?v=5.6.0';
-import {world,pond,WEST_EDGE,SIZE} from './world.js?v=5.6.0';
-import {segmentDistance} from './geometry.js?v=5.6.0';
-import {crowdActivity} from './weather.js?v=5.6.0';
-import {population,basePopulation} from './hero-life.js?v=5.6.0';
-import {southWalks} from './south.js?v=5.6.0';
-import {bodyOpacity} from './wreckage.js?v=5.6.0';
-import {pedestrianSites,streetProps} from './frontages.js?v=5.6.0';
-import {pedestrianIncidents} from './pedestrian-incidents.js?v=5.6.0';
-import {blocked,isDestroyed,isRoad,roads} from './world.js?v=5.6.0';
-import {intersectionCrossings,mayStartCrossing} from './signals.js?v=5.6.0';
+import {sidewalkWidth} from './street-space.js?v=5.6.1';
+import {railClearance} from './rail-layout.js?v=5.6.1';
+import {world,pond,WEST_EDGE,SIZE} from './world.js?v=5.6.1';
+import {segmentDistance} from './geometry.js?v=5.6.1';
+import {crowdActivity} from './weather.js?v=5.6.1';
+import {population,basePopulation} from './hero-life.js?v=5.6.1';
+import {southWalks} from './south.js?v=5.6.1';
+import {bodyOpacity} from './wreckage.js?v=5.6.1';
+import {pedestrianSites,streetProps} from './frontages.js?v=5.6.1';
+import {pedestrianIncidents} from './pedestrian-incidents.js?v=5.6.1';
+import {blocked,isDestroyed,isRoad,roads} from './world.js?v=5.6.1';
+import {intersectionCrossings,mayStartCrossing} from './signals.js?v=5.6.1';
 
 const face=(a,b)=>Math.atan2(b[1]-a[1],b[0]-a[0]);
 const at=(id,point,heading,pose,style)=>({id,x:point[0],y:point[1],heading,pose,style});

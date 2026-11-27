@@ -1,5 +1,5 @@
-import {roadFootprintOverlap,segmentDistance} from './geometry.js?v=5.6.0';
-import {groundHeight} from './elevation.js?v=5.6.0';
+import {roadFootprintOverlap,segmentDistance} from './geometry.js?v=5.6.1';
+import {groundHeight} from './elevation.js?v=5.6.1';
 export const lotNames={parking:'月極駐車場',court:'街角コート',field:'市民運動場',farm:'市民菜園',orchard:'果樹の庭',yard:'資材置場',sale:'売地',plaza:'記念広場',backlot:'路地裏の中庭',ballpark:'市民球場'};
 export const lotSizes={parking:[260,180],court:[230,180],field:[520,360],farm:[340,240],orchard:[360,260],yard:[310,220],sale:[340,240],plaza:[250,210],backlot:[180,150],ballpark:[640,500]};
 export function createCityLots({roads,solids,pond,inPark,railClearance,west,width,height,reserved=[]}){

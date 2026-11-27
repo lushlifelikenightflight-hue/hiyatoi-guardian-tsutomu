@@ -1,4 +1,4 @@
-import {decodeSave,encodeSave,createState} from './physics.js?v=5.6.0';
+import {decodeSave,encodeSave,createState} from './physics.js?v=5.6.1';
 export function readResume(storage,key){try{return decodeSave(storage.getItem(key));}catch{return null;}}
 export function beginNewSave(storage,key){
  const previous=storage.getItem(key),trial=storage.getItem(key+'-park-record');

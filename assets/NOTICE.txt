@@ -47,4 +47,4 @@ Destroy King (2026-11-24): original AI-generated orthographic concepts, processe
 
 2026-11-24訂正: 以前の「歌声なし」は生成指示であり、実音声に歌声が混入していた。4.1.3は既存htdemucs_6sでvocalsを除去したguardian-battle-instrumental.oggへ更新。利用者が冒頭20秒で歌声が消えたと確認。全曲の人による聴感確認とは区別。旧音源は復旧/比較用。分離器の出典/ライセンスは音源分離スタジオvendor/及びwork/provenance.jsonを参照。
 
-こもれびワークス / 2026-11-27: 既存のオリジナルタイトル旋律を96BPM/32小節/80秒に編曲。電気ピアノ、ベース、グロッケン、軽いドラムを数式合成。歌声/コーラス/音声モデル/外部サンプルは使用していません。tools/make-opening-score.pyが正本。ムービー音声とタイトル継続再生用のopening-title.oggに使用。
+こもれびワークス・スタジオ版 / 2026-11-27: 既存のローカル制作スタジオのMiniMax Music3 INT8でオリジナルのインスト曲を生成（歌声なし設定・空の歌詞）。音源分離スタジオのDemucs htdemucs_6sで曲全体のvocalsを除去し、ループ境界を2秒クロスフェード。音量を整え、動画とタイトルのBGMへ採用。生成条件/原FLAC/分離/ハッシュは非公開の制作記録work/studio-opening、モデルと工具は配信しません。MiniMaxの同梱ライセンスと、分離器の出典/ライセンスは既存音源分離スタジオvendor/を参照。

@@ -1,5 +1,5 @@
-import {roadside} from './job-contracts.js?v=5.6.0';
-import {world,civicSites,responseRoadPath,blocked} from './world.js?v=5.6.0';
+import {roadside} from './job-contracts.js?v=5.6.1';
+import {world,civicSites,responseRoadPath,blocked} from './world.js?v=5.6.1';
 export const extraJobTypes=[{id:'survey',name:'道路・設備の巡回点検',vehicle:0,reward:320},{id:'food',name:'スクーターの出前',vehicle:3,reward:240},{id:'race',name:'スポーツカーの市街地レース',vehicle:4,reward:280},{id:'security',name:'装甲車の警備輸送',vehicle:9,reward:650},{id:'restoration',name:'ロボの災害復旧',vehicle:10,reward:1000}];
 export function extraContract(s,spec,random=Math.random){
  const serial=(s.hero.jobCount??0)+Math.floor(random()*1000),all=world.props.filter(p=>p.job==='bus'||p.job==='mail');

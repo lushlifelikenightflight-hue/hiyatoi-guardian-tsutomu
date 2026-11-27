@@ -1,4 +1,4 @@
-import {clamp} from './geometry.js?v=5.6.0';
+import {clamp} from './geometry.js?v=5.6.1';
 
 export function travelBounds(west,east,height){
  return {west:west+110,east:east-110,north:130,south:height-130};

@@ -24,7 +24,7 @@ const themes={
   [62,65,69,null],[70,null,74,72],[69,65,60,null],[64,67,72,null]]}
 };
 
-const studioTracks={title:'assets/opening-title.ogg',drive:'assets/town-drive.ogg',night:'assets/town-night.ogg',battle:'assets/guardian-battle-instrumental.ogg'};
+const studioTracks={title:'assets/opening-title.ogg?v=5.6.1',drive:'assets/town-drive.ogg',night:'assets/town-night.ogg',battle:'assets/guardian-battle-instrumental.ogg'};
 export const defaultBgmGain=.9;
 
 export class SceneMusic {
@@ -102,7 +102,7 @@ export class SceneMusic {
    });
   }
  }
- status(){return {scene:this.scene,context:this.context.state,recorded:Boolean(this.track),loop:this.track?.loop??false,duration:this.track?.buffer?.duration??0,asset:studioTracks[this.scene]??null,starts:this.trackStarts,position:this.track?(this.context.currentTime-this.trackStartedAt)%this.track.buffer.duration:0};}
+ status(){return {scene:this.scene,context:this.context.state,recorded:Boolean(this.track),loop:this.track?.loop??false,duration:this.track?.buffer?.duration??0,asset:studioTracks[this.scene]??null,starts:this.trackStarts,elapsed:this.track?this.context.currentTime-this.trackStartedAt:0,position:this.track?(this.context.currentTime-this.trackStartedAt)%this.track.buffer.duration:0};}
  tone(bus,midi,start,length,volume,type){
   const context=this.context,osc=context.createOscillator(),gain=context.createGain();
   osc.type=type;

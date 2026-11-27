@@ -1,6 +1,6 @@
-import {mountHeroShop} from './hero-ui.js?v=5.6.0';
-import {vehicles} from './vehicle-specs.js?v=5.6.0';
-import {upgradeTypes,upgradeOffer,buyUpgrade,garageAt,garageSites,upgradeLimit} from './upgrades.js?v=5.6.0';
+import {mountHeroShop} from './hero-ui.js?v=5.6.1';
+import {vehicles} from './vehicle-specs.js?v=5.6.1';
+import {upgradeTypes,upgradeOffer,buyUpgrade,garageAt,garageSites,upgradeLimit} from './upgrades.js?v=5.6.1';
 
 export function mountGarage({state,save,notify,chooseTarget,onPurchase}){
  const $=id=>document.getElementById(id),select=$('garage-vehicle');

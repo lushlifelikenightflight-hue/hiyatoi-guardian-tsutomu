@@ -1,5 +1,5 @@
-import {WEST_EDGE,SIZE} from './world.js?v=5.6.0';
-import {groundHeight} from './elevation.js?v=5.6.0';
+import {WEST_EDGE,SIZE} from './world.js?v=5.6.1';
+import {groundHeight} from './elevation.js?v=5.6.1';
 // The same world-space shapes drive both the warnings and the hit tests.
 export const monsterAttacks=Object.freeze({
  stomp:{name:'踏みつけ',windup:.85,range:150,radius:130,damage:76,color:'#ffb36b'},

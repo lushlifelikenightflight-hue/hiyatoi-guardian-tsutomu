@@ -1,6 +1,6 @@
-import {makeCanvas} from './canvas-factory.js?v=5.6.0';
-import {bodyOpacity} from './wreckage.js?v=5.6.0';
-import {bakeStack,drawSprite,YAW} from './art.js?v=5.6.0';
+import {makeCanvas} from './canvas-factory.js?v=5.6.1';
+import {bodyOpacity} from './wreckage.js?v=5.6.1';
+import {bakeStack,drawSprite,YAW} from './art.js?v=5.6.1';
 export function garageStack(open=false){const layers=[],w=58,d=56;
  for(let z=0;z<34;z++){const im=makeCanvas();im.width=w;im.height=d;const g=im.getContext('2d'),box=(x,y,w,h,c)=>{g.fillStyle=c;g.fillRect(x,y,w,h);};
   if(z<2){box(0,0,w,d,'#536d70');for(let x=10;x<w-8;x+=18)box(x,20,1,30,'#e1c780');}

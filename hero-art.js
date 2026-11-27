@@ -1,4 +1,4 @@
-import {makeCanvas} from './canvas-factory.js?v=5.6.0';
+import {makeCanvas} from './canvas-factory.js?v=5.6.1';
 const canvas=(w,d)=>{const im=makeCanvas();im.width=w;im.height=d;return im;};
 const tint=(hex,n)=>'#'+hex.slice(1).match(/../g).map(v=>Math.max(0,Math.min(255,Math.round(parseInt(v,16)*n))).toString(16).padStart(2,'0')).join('');
 export function heroVehicleStack(kind){

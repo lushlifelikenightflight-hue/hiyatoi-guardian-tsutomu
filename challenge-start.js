@@ -1,5 +1,5 @@
-import {obstruction} from './physics.js?v=5.6.0';
-import {isRoad} from './world.js?v=5.6.0';
+import {obstruction} from './physics.js?v=5.6.1';
+import {isRoad} from './world.js?v=5.6.1';
 
 export function moveToChallengeStart(s,gate,heading){
  if(s.broken)return false;

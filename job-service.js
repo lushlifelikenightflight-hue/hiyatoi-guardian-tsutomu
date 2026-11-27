@@ -1,5 +1,5 @@
-import {blocked} from './world.js?v=5.6.0';
-import {vehicles} from './vehicle-specs.js?v=5.6.0';
+import {blocked} from './world.js?v=5.6.1';
+import {vehicles} from './vehicle-specs.js?v=5.6.1';
 
 export const serviceSeconds=1.5,jobFeedbackSeconds=3.4;
 const clamp=t=>Math.max(0,Math.min(1,t));

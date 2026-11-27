@@ -1,1 +1,1 @@
-export * from './world-data.js?v=5.6.0';
+export * from './world-data.js?v=5.6.1';
