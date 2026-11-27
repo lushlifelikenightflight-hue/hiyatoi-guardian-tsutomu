@@ -24,7 +24,7 @@ const themes={
   [62,65,69,null],[70,null,74,72],[69,65,60,null],[64,67,72,null]]}
 };
 
-const studioTracks={title:'assets/opening-title.ogg?v=5.6.3',drive:'assets/town-drive.ogg',night:'assets/town-night.ogg',battle:'assets/guardian-battle-instrumental.ogg'};
+const studioTracks={title:'assets/opening-title.ogg?v=5.7.0',drive:'assets/town-drive.ogg',night:'assets/town-night.ogg',battle:'assets/guardian-battle-instrumental.ogg'};
 export const defaultBgmGain=.9;
 
 export class SceneMusic {

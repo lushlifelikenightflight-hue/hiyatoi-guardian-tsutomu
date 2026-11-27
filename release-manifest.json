@@ -1,5 +1,5 @@
 {
-  "version": "5.6.3",
+  "version": "5.7.0",
   "profile": "production-static",
   "developerTools": false,
   "files": [
@@ -11,7 +11,7 @@
     {
       "file": "README.md",
       "bytes": 1036,
-      "sha256": "e5856a4b93243f17a40356a6f9aa652be02751bf85764cd0b0bc0361e81ec252"
+      "sha256": "7400d27942857308d84960c6d983ad19d836e1b3d4804ed3e3d82d1e9f2ceb92"
     },
     {
       "file": "ambulance.js",
@@ -35,8 +35,8 @@
     },
     {
       "file": "assets/NOTICE.txt",
-      "bytes": 6231,
-      "sha256": "8f70bb48106e13ece0dd3d855af39ae4cf17da594977517927b60732b8769cbd"
+      "bytes": 7060,
+      "sha256": "abc22f71d90fb4139e46b57c93dc24de16d7d40af82a0570d7bf2859c6ba7f1d"
     },
     {
       "file": "assets/bus.png",
@@ -60,8 +60,8 @@
     },
     {
       "file": "assets/opening-drive.mp4",
-      "bytes": 6695734,
-      "sha256": "9c7c155d1e9876dacb0dec40cb851d49c4321b75bfefa89530121f882f99b965"
+      "bytes": 6695622,
+      "sha256": "7ddae1772ce6e138d5c3e979b82dee6bf4d8ff20a0b0ec7eaea316fa617ac552"
     },
     {
       "file": "assets/opening-poster.jpg",
@@ -70,8 +70,8 @@
     },
     {
       "file": "assets/opening-title.ogg",
-      "bytes": 543046,
-      "sha256": "9a80f6de7c713d0ed1eb4943745c11f430f5d7baab174dfff78581dd42df584a"
+      "bytes": 1739686,
+      "sha256": "5d109ce47fc90bec99519655c0fc16609a1dbce111dd7ed7ef466d37473482c4"
     },
     {
       "file": "assets/robot/destroyking-parts.png",
@@ -236,7 +236,7 @@
     {
       "file": "game.js",
       "bytes": 49977,
-      "sha256": "ca2191458982bf32bed5fc62c5c7a7c133429a0220d9daa583d1dcf78ff3a8d6"
+      "sha256": "955bd56ecc5337b54079278e7180b8e4f6405e362b0e3cda31f916b2a1ae07d0"
     },
     {
       "file": "garage-art.js",
@@ -301,7 +301,7 @@
     {
       "file": "index.html",
       "bytes": 18158,
-      "sha256": "1c50f0cfc43776a3ef4face867eddf001742823d1cb9653e4ce9238ee6f87bfc"
+      "sha256": "15e38563fa3f034832df6413f5605a219b861ffd471e3195265524acb646dab5"
     },
     {
       "file": "job-contracts.js",
@@ -361,7 +361,7 @@
     {
       "file": "music.js",
       "bytes": 5553,
-      "sha256": "201e0fc3c9bb04cd1be4c1e4aeafc650becd911eb68b60940b0d57062899aac5"
+      "sha256": "c73ded29384258c2000f518436d6f9c46e40da6c3037faae11c94a9629bbc533"
     },
     {
       "file": "narration.css",
@@ -629,5 +629,5 @@
       "sha256": "62c628ecc87c4ec1e807b9b9a3594aaed03c17967c6fd6ae26c75e3ca0e40cc0"
     }
   ],
-  "bytes": 17727349
+  "bytes": 18924706
 }

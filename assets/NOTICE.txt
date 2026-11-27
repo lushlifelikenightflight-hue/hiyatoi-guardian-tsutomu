@@ -1,5 +1,7 @@
 木漏れ日ドライブ / Komorebi Drive
 
+2026-11-27 / 5.7.0: 「こもれびワークス」ロング版。既存主題とMiniMax Music3 INT8で新たに生成した3つの異なる展開を各1回使用。実出力の長さに合わせて1.0714秒のクロスフェードと音量を編集し、92.634秒のループにしました。歌詞は空・インスト設定に加え、全編をDemucs htdemucs_ftの歌声モデルで分離。最終音源と動画音声の全編・左右別AST解析は聴感確認の補助であり、声の不在の保証ではありません。30秒の映像は変更せず、ゲーム内では同じBGMをタイトルへ継続。原音・生成条件・分離・検証記録は非公開work/opening-long、モデル/工具/元素材を配布しません。出典とライセンスは以下のMiniMax/AST/Demucsの記載に従います。
+
 2026-11-27 / 5.6.3: オープニングの全編解析にMIT AST AudioSet（BSD-3-Clause、https://huggingface.co/MIT/ast-finetuned-audioset-10-10-0.4593）、追加の歌声分離にDemucs htdemucs_ft（MIT、https://github.com/facebookresearch/demucs）をローカル利用。本人が全曲ループ確認音源に歌・コーラスが聞こえないと回答。分類器の反応を無歌唱の保証とは扱わない。元のStudio曲と映像を保持し、音源だけ再編集。検査用モデル/コード/元素材は配布しません。
 
 The fictional town and park were drawn using geographic references from
