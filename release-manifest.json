@@ -1,5 +1,5 @@
 {
-  "version": "5.6.1",
+  "version": "5.6.2",
   "profile": "production-static",
   "developerTools": false,
   "files": [
@@ -11,7 +11,7 @@
     {
       "file": "README.md",
       "bytes": 1036,
-      "sha256": "9e73f23ae1c8c8bb4cfd873cb295129a96b2f5645b97849c2a820b7e4b9dfaf2"
+      "sha256": "46b11f52252c0f74f7f5d4b4d3dadd5a269dba10def2c2c92e01a86aeaaa3f16"
     },
     {
       "file": "ambulance.js",
@@ -235,8 +235,8 @@
     },
     {
       "file": "game.js",
-      "bytes": 49859,
-      "sha256": "c4fdb9154bf72d41aa6e8d2ddf8ad93e0486a94cf97f3135c684df58590b744f"
+      "bytes": 49977,
+      "sha256": "52c539504486b9c90ae63a5ae1efaac794d49d589d513af5f5bb92ca059becc5"
     },
     {
       "file": "garage-art.js",
@@ -301,7 +301,7 @@
     {
       "file": "index.html",
       "bytes": 18158,
-      "sha256": "28c90cc8608273e791ab648ff2b28668c34bb40765069149860befc694e5a04a"
+      "sha256": "ae51d7b6883bd0d947ddf4a612797b40d56740f1d7feebcef8c1723ff86f2f09"
     },
     {
       "file": "job-contracts.js",
@@ -555,8 +555,8 @@
     },
     {
       "file": "tsutomu-story.js",
-      "bytes": 5058,
-      "sha256": "06ef22d3ee6f242de51afa0c0a91b6b709c33134b71e70ed94464944492d6dc7"
+      "bytes": 5248,
+      "sha256": "3e1bf17f19c4248acba43a0e7bda043d7223dccaaa5557e67c64a13454fadb23"
     },
     {
       "file": "upgrades.js",
@@ -629,5 +629,5 @@
       "sha256": "62c628ecc87c4ec1e807b9b9a3594aaed03c17967c6fd6ae26c75e3ca0e40cc0"
     }
   ],
-  "bytes": 17725587
+  "bytes": 17725895
 }

@@ -11,7 +11,7 @@ import {garageContaining} from './garage-sites.js?v=5.6.1';
 import {loadPixelVfx} from './pixel-vfx.js?v=5.6.1';
 import {bindButtonGuards} from './button-guards.js?v=5.6.1';
 import {updateWeatherHazards} from './weather-effects.js?v=5.6.1';
-import {meeting,raidMessage,mountNarration} from './tsutomu-story.js?v=5.6.1';
+import {meeting,raidMessage,mountNarration} from './tsutomu-story.js?v=5.6.2';
 import {chooseMusicScene} from './music-scene.js?v=5.6.1';
 import {updateLife,daySeconds,weaponSpecs,population} from './hero-life.js?v=5.6.1';
 import {updateCombat} from './hero-combat.js?v=5.6.1';
@@ -484,7 +484,7 @@ window.addEventListener('keydown',e=>{
  const k=e.key.toLowerCase();
  if(k==='escape')return;
  if(progressUI.mode)return;
- if(storyGate)return;
+ if(storyGate){if(k===' ')e.preventDefault();return;}
  if(e.target instanceof HTMLSelectElement){
   if(e.target.id==='recovery-site'&&k==='r'&&!e.repeat){e.preventDefault();recover();}
   return;
@@ -492,11 +492,12 @@ window.addEventListener('keydown',e=>{
  if(chaseResult)return;
 
  if(!started||paused||map||photo){if(!e.repeat&&k==='m'&&map)setMap(false);return;}
- if(k===' '&&(e.target.closest('button, a, summary')||state.broken))return;
+ // During driving Space is always the brake, even when a HUD button has focus.
+ if(k===' '&&state.broken)return;
  if(['arrowup','arrowdown','arrowleft','arrowright',' '].includes(k))e.preventDefault();
  if(e.repeat)return;
  keys.add(k);if(k==='c')toggleRobotWeapon();if(/^[1-9]$/.test(k))chooseVehicle(Number(k)-1);if(k==='j')toggleWork();if(k==='g')setGarage(true);if(k==='h')chooseTarget('hero-home');if(k==='e'){for(let n=1;n<=vehicles.length;n++){const index=(state.vehicle+n)%vehicles.length;if(state.hero.owned[index]){chooseVehicle(index);break;}}};if(k==='r')recover();if(k==='m')setMap(true);if(k==='='||k==='+')renderer.targetZoom=Math.min(1.5,renderer.targetZoom+.15);if(k==='-')renderer.targetZoom=Math.max(.65,renderer.targetZoom-.15);
-});window.addEventListener('keyup',e=>keys.delete(e.key.toLowerCase()));window.addEventListener('blur',()=>{clearInput();save();});window.addEventListener('pagehide',()=>{clearInput();save();});window.addEventListener('contextmenu',event=>{if(!event.defaultPrevented)clearInput();});document.addEventListener('visibilitychange',()=>{clearInput();syncMusic();last=performance.now();if(document.hidden)save();});window.addEventListener('resize',()=>{renderer.resize();if(map)paintLargeMap();});
+});window.addEventListener('keyup',e=>{if(e.key===' '&&storyGate)e.preventDefault();keys.delete(e.key.toLowerCase());});window.addEventListener('blur',()=>{clearInput();save();});window.addEventListener('pagehide',()=>{clearInput();save();});window.addEventListener('contextmenu',event=>{if(!event.defaultPrevented)clearInput();});document.addEventListener('visibilitychange',()=>{clearInput();syncMusic();last=performance.now();if(document.hidden)save();});window.addEventListener('resize',()=>{renderer.resize();if(map)paintLargeMap();});
 // Keyboard focus stays inside an open overlay; driving input is cleared on every transition.
 document.addEventListener('keydown',e=>{if(e.key!=='Tab'||storyGate)return;const panel=progressUI.panel??(instructionsOpen?$('instructions-panel'):vehiclePicker?$('vehicle-picker'):chaseResult?$('pursuit-result'):garageOpen?$('garage-panel'):!$('menu').hidden?$('menu'):!$('map-panel').hidden?$('map-panel'):!$('breakdown').hidden?$('breakdown'):null);if(!panel)return;const nodes=[...panel.querySelectorAll('button,a,select,summary,canvas[tabindex]')].filter(el=>el.offsetParent!==null);const first=nodes[0],end=nodes.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();end.focus();}else if(!e.shiftKey&&document.activeElement===end){e.preventDefault();first.focus();}});
 async function boot(){try{

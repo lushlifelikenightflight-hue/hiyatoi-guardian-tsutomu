@@ -19,7 +19,9 @@ export function mountNarration({onClose}){
  function render(){const p=pages[index];document.getElementById('narration-heading').textContent='つとむ：'+p.title;document.getElementById('narration-text').textContent=p.text;document.getElementById('narration-page').textContent=kind==='intro'?(index+1)+' / '+pages.length:kind==='vehicle'?'新しい乗り物':kind==='tutorial'?'相棒のひとこと':'街を守るヒーロー';next.textContent=index<pages.length-1?'次へ':kind==='raid'?'現場へ向かう':kind==='vehicle'?'仕事に出よう':kind==='tutorial'?'やってみる':'指示をはじめる';next.focus({preventScroll:true});}
  function close(){if(!kind)return;const finished=kind;kind=null;root.hidden=true;onClose(finished);}
  next.addEventListener('click',()=>{if(!kind)return;if(index<pages.length-1){index++;render();}else close();});
- for(const b of [next])b.addEventListener('keydown',e=>{if(e.repeat&&(e.key==='Enter'||e.key===' '))e.preventDefault();});
+ // Space belongs to driving, never to advancing a conversation. Also cancel
+ // keyup when a conversation appeared between pressing and releasing the brake.
+ for(const type of ['keydown','keyup'])next.addEventListener(type,e=>{if(e.key===' '||(type==='keydown'&&e.repeat&&e.key==='Enter'))e.preventDefault();});
  root.addEventListener('keydown',e=>{if(e.key==='Tab'){const first=next,last=next;if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}});
  return {open(type,script){kind=type;pages=script;index=0;root.hidden=false;render();},close,get kind(){return kind;}};
 }
